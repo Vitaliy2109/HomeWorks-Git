@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body html {
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+fieldset {
+    border: 0px;
+    
+}
+#gender li {
+    list-style: none;
+    text-align: center;
+    
+    
+}
+
+
+.container {
+    width: calc(100% - 30px);
+    max-width: 650px;
+    font-family: 'Open Sans', sans-serif;
+    
+    margin: 250px auto;
+    font-size: 20px;  
+}
+#user_name {
+    margin-left: 200px;
+    width: 300px;
+}
+#user_email {
+    margin-left: 250px;
+    width: 300px;
+}
+#user_password {
+    margin-left: 227px;
+    width: 300px;
+}
+#user_password2 {
+    margin-left: 304px;
+    width: 300px;
+
+}
+#user_age{
+    margin-left: 270px;
+    width: 300px;
+}
+#course {
+    margin-left: 255px;
+    width: 300px;
+}
+#user_adress {
+    margin-left: 300px;
+    width: 300px;
+}
+
+
+form {
+	display: block;
+	background: #155535;
+	padding: 0px;
+	width: 100%;
+	color: white;
+	margin-right: auto;
+	margin-left: auto;
+    border-radius: 10px;
+}
+
+button {
+    margin: 10px 75px;
+	font-size: 14pt;
+	color: white;
+	background: #00694f;
+	height: 55px;
+	padding: 10px;
+	border: 1px solid #F5C4AB;
+}
+button:hover {
+    background: #69000e;
+}
+

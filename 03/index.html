@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Form</title>
+  </head>
+
+  <body>
+    <div class="page_wrap">
+      <header></header>
+      <main>
+        <div class="section">
+          <div class="container">
+            <form action="#" method="post">
+              <fieldset id="general_info">
+                <label for="user_name">Повне ім'я</label>
+                <input
+                  class="block"
+                  type="text"
+                  name="name"
+                  id="user_name"
+                  placeholder="Тарас Шевчеко"
+                  required
+                />
+                <br />
+                <label for="user_email">Email</label>
+                <input
+                  class="block"
+                  type="email"
+                  name="email"
+                  id="user_email"
+                  placeholder="example@gmail.com"
+                  required
+                />
+              </fieldset>
+
+              <fieldset id="passwords">
+                <label for="user_password">Пароль</label>
+                <input
+                  type="password"
+                  name="password[]"
+                  id="user_password"
+                  required
+                />
+                <br />
+                <label for="user_password2">Пароль ще раз</label>
+                <input
+                  type="password2"
+                  name="password[]"
+                  id="user_password2"
+                  required
+                />
+              </fieldset>
+              <fieldset id="gender">
+                <p>Стать</p>
+                <ul>
+                  <li>
+                    <label>
+                      <input
+                        type="radio"
+                        name="gender[]"
+                        id="male"
+                        checked
+                      />Чоловіча
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="radio" name="gender[]" id="famale" />Жіноча
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="radio" name="gender[]" id="other" />Інше
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset id="age">
+                <label
+                  >Вік
+                  <input type="number" id="user_age"placeholder="0-100" required />
+                </label>
+              </fieldset>
+              <fieldset>
+                <label
+                  >Курс
+                  <select name="course[]" id="course">
+                    <option selected>-=Виберіть курс=-</option>
+                    <option value="project_management">
+                      Project Management
+                    </option>
+                    <option value="qa_manual">QA Manual</option>
+                    <option value="back_end">Back-End</option>
+                    <option value="front_end">Front-End</option>
+                  </select>
+                </label>
+              </fieldset>
+              <fieldset>
+                <label
+                  >Повна адреса
+                  <textarea
+                  id="user_adress"
+                    cols="22"
+                    rows="4"
+                    placeholder="Країна, регіон, місто/ селище, вулиця"
+                  ></textarea>
+                </label>
+              </fieldset>
+
+              <fieldset id="confirm">
+                <label>
+                  <input type="checkbox" />Я погоджуюсь з обробкою моїх
+                  персональних даних
+                </label>
+              </fieldset>
+              <button id="but" type="reset">Очистити форму</button>
+              <button id="but" type="submit">Зареєструватися</button>
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+</html>
