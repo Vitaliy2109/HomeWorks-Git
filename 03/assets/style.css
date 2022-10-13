@@ -9,45 +9,62 @@ body html {
     height: 100%;
     
 }
-
-
-
-#gender li {
-    list-style: none;
-    
-    
-    
-}
-
-
-.container {
-    width: calc(100% - 30px);
-    max-width: 650px;
-    font-family: 'Open Sans', sans-serif;
-    margin: 250px auto;
-    font-size: 20px;  
-}
-
-label {
-    width: 300px;
-    display: inline-block;
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 form {
-	background: #155535;
-	color: white;
+    
+    width: 700px;
+    padding: 32px;
     border-radius: 10px;
-}
-button {
-    margin: 10px 75px;
-	font-size: 14pt;
-	color: white;
-	background: #00694f;
-	height: 55px;
-	padding: 10px;
-	border: 1px solid #F5C4AB;
-}
-button:hover {
-    background: #69000e;
+    box-shadow: 0 4px 16px #ccc;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    
 }
 
+input, button {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+   
+}
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 1;
+}
+label {
+    display: inline-block;
+width: 200px;
+
+}
+ul li {
+    list-style-type: none;
+    float: left;
+    text-align: center;
+}
+ gender {
+    text-align: center;
+    font-size: 20px;
+   
+}
+.form_group {
+    margin: 35px 0px;
+}
+.other_info {
+    text-align: center;
+}
+.checkbox {
+    white-space: nowrap;
+    margin-right: 190px;
+}
+button {
+    margin: 0 0 0 75px;
+    font-size: 22px;
+}
