@@ -21,7 +21,7 @@
         <div class="section">
           <div class="container">
             <form action="#" method="post">
-              <fieldset id="general_info">
+              <div class="general_info">
                 <label for="user_name">Повне ім'я</label>
                 <input
                   class="block"
@@ -31,7 +31,7 @@
                   placeholder="Тарас Шевчеко"
                   required
                 />
-                <br />
+
                 <label for="user_email">Email</label>
                 <input
                   class="block"
@@ -41,33 +41,32 @@
                   placeholder="example@gmail.com"
                   required
                 />
-              </fieldset>
+              </div>
 
-              <fieldset id="passwords">
-                <label for="user_password">Пароль</label>
+              <div class="pawsswords">
+                <label for="user_password1">Пароль</label>
                 <input
                   type="password"
-                  name="password[]"
+                  name="password1"
                   id="user_password"
                   required
                 />
-                <br />
                 <label for="user_password2">Пароль ще раз</label>
                 <input
                   type="password"
-                  name="password[]"
+                  name="password2"
                   id="user_password2"
                   required
                 />
-              </fieldset>
-              <fieldset id="gender">
-                <p>Стать</p>
+              </div>
+              <div class="gender">
                 <ul>
+                  Стать
                   <li>
                     <label>
                       <input
                         type="radio"
-                        name="gender[]"
+                        name="gender"
                         id="male"
                         checked
                       />Чоловіча
@@ -75,31 +74,31 @@
                   </li>
                   <li>
                     <label>
-                      <input type="radio" name="gender[]" id="famale" />Жіноча
+                      <input type="radio" name="gender" id="famale" />Жіноча
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input type="radio" name="gender[]" id="other" />Інше
+                      <input type="radio" name="gender" id="other" />Інше
                     </label>
                   </li>
                 </ul>
-              </fieldset>
-              <fieldset id="age">
+              </div>
+             <div class="age">
                 <label
                   >Вік
                   <input
+                    name="user_age"
                     type="number"
-                    id="user_age"
                     placeholder="0-100"
                     required
                   />
                 </label>
-              </fieldset>
-              <fieldset>
+              </div>
+              <div class="course">
                 <label
                   >Курс
-                  <select name="course[]" id="course">
+                  <select name="course">
                     <option selected>-=Виберіть курс=-</option>
                     <option value="project_management">
                       Project Management
@@ -109,27 +108,27 @@
                     <option value="front_end">Front-End</option>
                   </select>
                 </label>
-              </fieldset>
-              <fieldset>
+              </div>
+              <div class="user_adress">
                 <label
                   >Повна адреса
                   <textarea
-                    id="user_adress"
+                    name="user_adress"
                     cols="22"
                     rows="4"
                     placeholder="Країна, регіон, місто/ селище, вулиця"
                   ></textarea>
                 </label>
-              </fieldset>
+              </div>
 
-              <fieldset id="confirm">
+              <div class="confirm">
                 <label>
                   <input type="checkbox" />Я погоджуюсь з обробкою моїх
                   персональних даних
                 </label>
-              </fieldset>
-              <button id="but" type="reset">Очистити форму</button>
-              <button id="but" type="submit">Зареєструватися</button>
+              </div>
+              <button id="button_reset" type="reset">Очистити форму</button>
+              <button id="button_submit" type="submit">Зареєструватися</button>
             </form>
           </div>
         </div>
