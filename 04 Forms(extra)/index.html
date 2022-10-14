@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Forms extra</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <form
+          action="#"
+          method="post"
+          id="my_form"
+          onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;"
+        >
+          <section>
+            <fieldset>
+              <legend>Общие данные</legend>
+              <div class="form_item">
+                <label>
+                  Заблокированное поле
+                  <input
+                    name="dis_text"
+                    type="text"
+                    value="меня нельзя менять"
+                    disabled
+                /></label>
+              </div>
+
+              <div class="form_item">
+                <label>
+                  Какой то текст
+                  <input
+                    name="sometext"
+                    type="text"
+                    value="Меня только читать"
+                    readonly
+                /></label>
+              </div>
+              <div class="form_item">
+                <label>
+                  Имя питомца
+                  <input
+                    name="pets"
+                    type="text"
+                    placeholder="кот Бегемот"
+                    required
+                    title="Заполните это поле."
+                  />
+                </label>
+              </div>
+              <div class="form_item">
+                <label>
+                  Ваш email
+                  <input
+                    name="user_email"
+                    type="email"
+                    placeholder="ivanov@domain.com"
+                  />
+                </label>
+              </div>
+              <div class="form_item">
+                <label>
+                  Секретный пароль <input name="user_pass1" type="password" />
+                </label>
+              </div>
+              <div class="form_item">
+                <label>
+                  Дата рождения Шевченко Т.Г. <input name="date" type="date" />
+                </label>
+              </div>
+              <div class="form_item">
+                <label>
+                  Возраст дерева возле дома
+                  <input name="tree_age" type="number" />
+                </label>
+              </div>
+              <div class="form_item">
+                <label for="gender">Ваш пол</label>
+                <ul>
+                  <li>
+                    <label>
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="parket"
+                        checked
+                        id="gender"
+                      />Паркет
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="laminat"
+                      />Ламинат
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="kovrolin"
+                      />Ковролин
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="form_item">
+                <label for="socials">Социальные сети</label>
+                <ul>
+                  <li>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="socials[]"
+                        value="facebook"
+                        id="socials"
+                      />Лицокнига</label
+                    >
+                  </li>
+                  <li>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="socials[]"
+                        value="twitter"
+                      />Птичка</label
+                    >
+                  </li>
+                  <li>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="socials[]"
+                        value="instagram"
+                      />Инста</label
+                    >
+                  </li>
+                  <li>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="socials[]"
+                        value="linkedin"
+                      />LinkedIn</label
+                    >
+                  </li>
+                  <li>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="socials[]"
+                        value="tumbler"
+                      />Тумблер</label
+                    >
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+          </section>
+          <section>
+            <fieldset>
+              <legend>Другая информация</legend>
+              <div class="form_item">
+                <label>
+                  Любимый цвет соседа<input name="color" type="color" />
+                </label>
+              </div>
+              <div class="form_item">
+                <label>
+                  Телефон поддержки Front-End разработчиков<input
+                    name="support_phone"
+                    type="tel"
+                  />
+                </label>
+              </div>
+              <div class="form_item">
+                <label>
+                  Время следующего занятия<input name="time" type="time" />
+                </label>
+              </div>
+              <div class="form_item">
+                <label>
+                  Ссылка на любимый сайт<input name="url" type="url" />
+                </label>
+              </div>
+              <div class="form_item">
+                <label>
+                  Число от 1 до 10
+                  <input name="range" type="range" min="0" max="10" />
+                </label>
+              </div>
+              <div class="form_item">
+                <label>
+                  Поделитесь картинкой
+                  <input name="user_img" type="file" />
+                </label>
+              </div>
+            </fieldset>
+          </section>
+          <section>
+            <fieldset>
+              <legend>Не input-ы</legend>
+              <div class="form_item">
+                <label>
+                  Любимый напиток
+                  <select name="select_drink">
+                    <option>_=Выберите Напиток=_</option>
+                    <optgroup label="Безалкогольные">
+                      <option value="tea">Чай</option>
+                      <option value="coffee">Кофе</option>
+                      <option value="kompot">Компот</option>
+                      <option value="juice">Сок</option>
+                    </optgroup>
+                    <optgroup label="Алкогольные">
+                      <option value="beer">Пиво</option>
+                      <option value="vine">Вино</option>
+                      <option value="rum">Ром</option>
+                      <option value="cognac">Коньяк</option>
+                      <option value="teqila">Текила</option>
+                    </optgroup>
+                  </select>
+                </label>
+              </div>
+              <div class="form_item">
+                <label>
+                  Любимые напитки
+                  <select name="select_drinks" class="select_drinks" multiple>
+                    <option>_=Выберите Напитки=_</option>
+                    <optgroup label="Безалкогольные">
+                      <option value="tea[]">Чай</option>
+                      <option value="coffee[]">Кофе</option>
+                      <option value="kompot[]">Компот</option>
+                      <option value="juice[]">Сок</option>
+                    </optgroup>
+                    <optgroup label="Алкогольные">
+                      <option value="beer[]">Пиво</option>
+                      <option value="vine[]">Вино</option>
+                      <option value="rum[]">Ром</option>
+                      <option value="cognac[]">Коньяк</option>
+                      <option value="teqila[]">Текила</option>
+                    </optgroup>
+                  </select>
+                </label>
+              </div>
+              <div class="" >
+                <label>
+                  Коментарий на свободную тему
+                  <textarea
+                    name="comment"
+                    cols="50"
+                    rows="6"
+                    placeholder="В эту область помещается 50 символов в строке и 6 строк"
+                  ></textarea>
+                </label>
+              </div>
+            </fieldset>
+          </section>
+          <section>
+            <fieldset>
+              <legend>Кнопочки</legend>
+              <div class="form_item">
+                <ul>
+                  <li>
+                    <button type="submit" id="but_submit">Отправить</button>
+                  </li>
+                  <li><button type="reset" id="but_reset">Сбросить</button></li>
+                  <li><button id="but_empty">Просто кнопка</button></li>
+                  <li>
+                    <button disabled="disabled" id="but_disabled">
+                      Йа заблокирована:(
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+          </section>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
