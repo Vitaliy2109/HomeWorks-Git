@@ -232,25 +232,25 @@
               <div class="form_item">
                 <label>
                   Любимые напитки
-                  <select name="select_drinks" class="select_drinks" multiple>
+                  <select name="select_drinks[]" class="select_drinks" multiple>
                     <option>_=Выберите Напитки=_</option>
                     <optgroup label="Безалкогольные">
-                      <option value="tea[]">Чай</option>
-                      <option value="coffee[]">Кофе</option>
-                      <option value="kompot[]">Компот</option>
-                      <option value="juice[]">Сок</option>
+                      <option value="tea">Чай</option>
+                      <option value="coffee">Кофе</option>
+                      <option value="kompot">Компот</option>
+                      <option value="juice">Сок</option>
                     </optgroup>
                     <optgroup label="Алкогольные">
-                      <option value="beer[]">Пиво</option>
-                      <option value="vine[]">Вино</option>
-                      <option value="rum[]">Ром</option>
-                      <option value="cognac[]">Коньяк</option>
-                      <option value="teqila[]">Текила</option>
+                      <option value="beer">Пиво</option>
+                      <option value="vine">Вино</option>
+                      <option value="rum">Ром</option>
+                      <option value="cognac">Коньяк</option>
+                      <option value="teqila">Текила</option>
                     </optgroup>
                   </select>
                 </label>
               </div>
-              <div class="" >
+              <div class="">
                 <label>
                   Коментарий на свободную тему
                   <textarea
@@ -274,7 +274,7 @@
                   <li><button type="reset" id="but_reset">Сбросить</button></li>
                   <li><button id="but_empty">Просто кнопка</button></li>
                   <li>
-                    <button disabled="disabled" id="but_disabled">
+                    <button  id="but_disabled" disabled>
                       Йа заблокирована:(
                     </button>
                   </li>
