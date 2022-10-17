@@ -56,7 +56,13 @@ header {
 }
 
 /*===HEADER====*/
-
+ h2{
+  color: #070707;
+  font-size: 34px;
+  line-height: 46px;
+  letter-spacing: 0em;
+ 
+  }
 /*===SECTION 1====*/
 .container #photo {
    display: block;
@@ -75,7 +81,7 @@ margin-top: 13px;
 /*===SECTION 1====*/
 
 /*===SECTION 2====*/
- #about {
+ .back_col {
     text-align: center;
     background-color: #f6f6f6;
 }
@@ -110,16 +116,12 @@ color:  #070707;
 }
 
 .heading h2{
-color: #070707;
-font-size: 34px;
-line-height: 46px;
-letter-spacing: 0em;
 margin-bottom: 13px;
 }
 
 #skills .container {    
 padding: 100px 0px;
-
+height: 564px;
 
     }
     
@@ -166,4 +168,101 @@ opacity: 0.5;
     margin-bottom: 80px;
   }
 /*===SECTION 3====*/
+
+
+
+
+/*===SECTION 4====*/
+.portfolio.back_col {
+  padding: 59px 0px 30px 0px;
+}
+.container.portfolio h2 {
+margin: 40px 410px 45px 410px;
+}
+.portfolio_img {
+  margin-bottom: 35px;
+}
+.portfolio_bottom_text {
+font-size: 18px;
+font-weight: 400;
+line-height: 25px;
+letter-spacing: 0em;
+text-align: center;
+width: 200px;
+display: inline-block;
+margin-bottom:69px;
+
+}
+.portfolio_bottom_text:last-child {
+  width: 260px;
+  margin-bottom: 68px;
+}
+.portfolio_bottom_text a {
+  color: #070707;
+}
+/*===SECTION 4====*/
+
+
+/*===FOOTER====*/
+.container.footer {
+  text-align: center;
+  padding: 100px 250px;
+}
+/*===CONTACTS====*/
+
+.contacts {
+  width: 280px;
+ display: inline-block;
+ margin-bottom: 55px;
+}
+.contacts h2 {
+  margin-bottom: 15px;
   
+} 
+/*===CONTACTS====*/
+/* BUTTON*/
+.btn {
+  padding: 10px 16px;
+  font-family: Open Sans;
+font-size: 18px;
+font-weight: 700;
+line-height: 25px;
+letter-spacing: 0.1em;
+text-align: center;
+background-color: #070707;
+color: #ffff;
+border-radius: 50px;
+border: 1px solid #070707;
+cursor: pointer;
+transition: all .4s ease;
+margin-bottom: 27px;
+}
+.btn:hover {
+  background-color: #c4c4c4;
+  color: #070707;
+  
+}
+/* BUTTON*/
+/*===LINKS====*/
+.links ul li {
+  display: inline-block;
+  margin-right: 45px;
+  margin-bottom: 54px;
+}
+.links ul li:last-child {
+  margin-right: 0px;
+}
+/*===LINKS====*/
+.footer_text{
+  width: 200px;
+  height: 60px;
+  font-family: Open Sans;
+font-size: 14px;
+font-weight: 400;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: center;
+display: inline-block;
+
+}
+/*===FOOTER====*/
