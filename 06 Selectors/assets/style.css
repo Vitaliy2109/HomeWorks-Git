@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height:  100%;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #3B3F45;
+    border: 10px solid #fff;    
+    
+}
+.container{  
+   width: 90%;
+   max-width: 534px;
+   margin: 0 auto;
+}
+/*===HEADER===*/
+.heading{
+    padding: 19px 270px 12px 247px;
+    color: #FF8984; 
+    background: #4A4F56;
+    margin-bottom: 21px;
+}
+.heading h1 {
+    text-align: center;
+    height: 28px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+}
+.heading p {
+    text-align: center;
+    margin-top: 4px;
+}
+/*===HEADER===*/
+
+/*===MAIN===*/
+#text_block .container {
+    background: #ffff;
+    margin-bottom: 45px;
+}
+ul li {
+    list-style-type: none;
+    background: #88839E;
+}
+.text_box label:hover {
+    background: #625E77;
+    border-top: 3px solid #ffff;
+    border-bottom: 3px solid #ffff;
+    cursor: pointer;
+} 
+ul li:nth-child(2n) {
+    background: #7A7593;
+
+}
+ul li input {
+    display: none;
+}
+
+.text_box input + label {
+display: block;
+padding-bottom: 12px;
+padding-top: 8px;
+font-size: 18px;
+line-height: 21px;
+position: relative;
+padding-left: 12px;
+color: #FFFFFF;
+}
+
+.span_text {
+font-size: 11px;
+line-height: 13px;
+
+}
+
+.text_box input + label::before {
+    content: "";
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    border: none;
+    display: inline-block;
+    background-color: #fff;
+    margin-right: 16px;
+}
+.text_box input + label::after {
+    content: "";
+    display: none;
+    width: 7px;
+    height: 3px;
+    border-left: 4px solid #4A4F56;
+    border-bottom: 4px solid #4A4F56;
+    transform: rotate(-55deg);
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    
+}
+.text_box input:checked + label::after {
+    display: inline-block;
+}
+.text_box input:checked + label  {
+   text-decoration: line-through;
+}
+
+.span_text::before {
+    content: "(";
+}
+.span_text::after {
+    content: ")";
+}
+.text_box input + label:active {
+    background-color: #FF8984;
+} 
+
+/*===FOOTER====*/
+footer .container {
+text-align: center;
+background: #4A4F56;
+padding-top: 12px;
+padding-bottom: 12px;
+font-size: 18px;
+font-weight: 400;
+color: #FF8984;
+}
