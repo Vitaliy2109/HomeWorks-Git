@@ -54,10 +54,13 @@ ul li {
     cursor: pointer;
 } 
 .text_box label {
-    background: #7A7593;
+   
     border-bottom: 2px solid #7A7593;
 }
-
+ul li:nth-child(2n) {
+    background: #7A7593;
+    border-bottom: 1px solid #625E77;
+}
 ul li input {
     display: none;
 }
