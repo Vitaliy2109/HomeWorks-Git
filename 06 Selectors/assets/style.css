@@ -46,31 +46,33 @@ body {
 }
 ul li {
     list-style-type: none;
-    background: #88839E;
+    background: #88839E;   
 }
 .text_box label:hover {
     background: #625E77;
-    border-top: 3px solid #ffff;
-    border-bottom: 3px solid #ffff;
+    border-color: #FFFFFF;
     cursor: pointer;
 } 
-ul li:nth-child(2n) {
+.text_box label {
     background: #7A7593;
-
+    border-bottom: 2px solid #7A7593;
 }
+
 ul li input {
     display: none;
 }
 
 .text_box input + label {
 display: block;
-padding-bottom: 12px;
-padding-top: 8px;
-font-size: 18px;
+padding-bottom: 11px;
+padding-top: 6px;
+font-size: 17px;
 line-height: 21px;
 position: relative;
 padding-left: 12px;
 color: #FFFFFF;
+border-top: 2px solid #625E77;
+
 }
 
 .span_text {
@@ -107,6 +109,8 @@ line-height: 13px;
 }
 .text_box input:checked + label  {
    text-decoration: line-through;
+   color: #9B96AC;
+
 }
 
 .span_text::before {
