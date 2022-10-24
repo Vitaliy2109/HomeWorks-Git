@@ -15,7 +15,7 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    font-size: 42px;
-   position: absolute;
+   
  }
 
 /* li:hover{
@@ -87,7 +87,7 @@ body {
     margin: 0 auto;
 }
 .container {
-    max-width: 1166px;
+    max-width: 1171px;
     width: 90%;
     margin: 0 auto;
     display: block;
@@ -96,12 +96,11 @@ body {
  /*====HEADER====*/
 .head_text {
     padding-top: 36px;   
-    margin-left: -2px; 
-    margin-bottom: 34px;
+    margin-bottom: 31px;
 }
 .head_text h1 {
-    font-size: 21px;
-    font-family: Lucida Sans Unicode;
+font-size: 21px;
+font-family: Lucida Sans Unicode;
 font-size: 21px;
 color: #ffff;
 font-weight: 100;
@@ -117,20 +116,22 @@ main ul {
     text-align: center;
     font-size: 22px;
     border: 2px solid #ffff;
-    padding-top: 27px;
-    padding-bottom: 40px;
-   height: 147px;
+    padding-top: 23px;
+    padding-bottom: 34px;
    cursor: pointer;
  }
 
-
-
- .temp {
-   margin-left: -55px;
-   margin-top: 11px;
+ li .city {
+  margin-bottom: 10px;
+  
  }
+.temp i {
+  vertical-align: middle;
+}
+
+ 
  .temp span {
-   margin-right: 13px;
+   margin-right: 6px;
  }
 
  #lisbon {
@@ -183,15 +184,19 @@ main ul {
  }
 
 ul:hover li {
-   filter: blur(3px);
+   /* filter: blur(3px); */
    opacity: .5;
-
 }
 
 ul:hover li:hover {
-   filter: blur(0px);
+   /* filter: blur(0px); */
    opacity: 1;
 }
+
+
+
 main .container {
    margin-bottom: 37px;
+   background-color: #ffff;
+   padding: 2px;
 }
