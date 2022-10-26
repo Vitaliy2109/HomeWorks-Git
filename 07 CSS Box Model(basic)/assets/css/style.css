@@ -37,10 +37,9 @@ header {
 .header_img {
     margin-right: 9px;
     margin-top: -3px;
-}
-.header_logo {
     margin-right: 198px;
 }
+
 
 .header_links ul li{
     margin-right: 16px;
@@ -69,10 +68,11 @@ nav {
     margin-top: -9px;
     cursor: pointer;
     text-align: center; 
-
+    transition: all .1s ease-in
     }
     .btn:hover {
-        opacity: 0.6;
+    filter: saturate(6);
+    transform: scale(1.1);
     }
 #left_btn{
     margin-right: 27.5px;
