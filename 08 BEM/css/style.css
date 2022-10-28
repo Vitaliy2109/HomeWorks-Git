@@ -65,26 +65,25 @@ font-weight: 600;
     margin-right: 246px;
 }
 
-.button__callback {
+
+.button{
+    top: 19px;
+  position: absolute;
+  right: 19.4%;
+    border: 1px solid #000;
+    cursor: pointer;
+    background-color: #ffff;
     display: block;
     padding: 9px 19px;
     font-weight: 600;
     font-size: 18px;
     font-family: lato;
 }
-.button{
-    top: 19px;
-    position: absolute;
-    border: 1px solid #000;
-    cursor: pointer;
-    background-color: #ffff;
-}
-.button__callback:hover {
- color: #FFFF;
-}
+
+
 .button:hover {
     background-color: #18B5DC;
-
+    color: #FFFF;
     border: 1px solid  #18B5DC;
     
 }
@@ -150,7 +149,34 @@ ul li {
    justify-content: center;
    background-color: #18B5DC;
    position: absolute;
+
 }
+
+.link__icon--white {
+    display: none;
+}
+
+
+.link__wrapper:hover .link__icon {
+display: none;
+}
+
+.link__wrapper:hover .link__icon--white {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .team {
     display: flex;
