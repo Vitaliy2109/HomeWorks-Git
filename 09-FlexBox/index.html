@@ -96,11 +96,11 @@
         </main>
         <footer>
             <div class="container">
-                <ul class="list">
-                    <li class="list-item">
+                <div class="list">
+                    <div class="list-item">
                         <img class="logo" src="assets/img/header/Logo (1).svg" alt="">
-                    </li>
-                    <li class="list-item">
+                    </div>
+                    <div class="list-item">
                         <div class="footer__links">
                             <h3 class="title-text">Quick Links</h3>
                             <ul class="links">
@@ -110,8 +110,8 @@
                                 <li class="link"><a href=#"">FAQ</a></li>
                             </ul>
                         </div>
-                    </li>
-                    <li class="list-item">
+                    </div>
+                    <div class="list-item">
                         <div class="footer__links">
                             <h3 class="title-text">Legal Stuff</h3>
                             <ul class="links">
@@ -121,16 +121,19 @@
                                 <li class="link"><a href=#"">Terms of Service</a></li>
                             </ul>
                         </div>
-                    </li>
-                    <li class="list-item">
+                    </div>
+                    <div class="list-item">
                         <h3 class="title-text last">Knowing you're always on <br> the best energy deal.
                         </h3>
-                        <div class="input">
-                            <input type="tel" id="user-phone" placeholder="Enter your phone Number">
-                        </div>
+                        <form id="form" method="post" action="#">
+                            <div class="input">
+                                <input type="tel" id="user-phone" placeholder="Enter your phone Number">
+                            </div>
+                        </form>
                         <button type="button" class="btn big-btn" id="sign-up-now">Sign up Now</button>
-                    </li>
-                </ul>
+
+                    </div>
+                </div>
             </div>
         </footer>
     </div>

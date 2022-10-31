@@ -142,7 +142,7 @@ color: #544837;
 
 #section-2 {
     padding-bottom: 74px;
-
+    background-size: cover;
     background-image: url(../img/section-2/bg.svg);
     background-repeat: no-repeat;
     background-position: 50% 100% 
