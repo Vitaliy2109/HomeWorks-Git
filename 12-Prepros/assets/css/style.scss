@@ -1,0 +1,236 @@
+$text-grey:   #666666;
+$color-gold: #FFCC00;
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 80px;
+   
+}
+
+h1, h2, h3, h4, p {
+    color: $text-grey
+}
+ul li {
+    list-style-type: none;
+}
+
+.header {
+text-align: center;
+margin-bottom: 41px;
+}
+.container {
+    max-width: 1030px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: #898f8f;
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 17px;
+
+}
+h2 {
+    font-family: "Roboto";
+    line-height: 66px;
+    text-transform: uppercase;
+    color: $color-gold;
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 32px;
+}
+
+.bonfire {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &::before {
+        display: inline-block;
+        content: "";
+        width: 210px;
+        border-top: 1px solid #FFCC00;
+    }
+    &::after {
+        display: inline-block;
+        content: "";
+        width: 210px;
+        border-top: 1px solid #FFCC00;
+    }
+    img {
+        padding: 0px 5px;
+    }
+}
+
+
+
+/*====SECTION=====*/
+
+
+.photo-box {
+    display: inline-block;
+    position: relative;
+    padding: 15px;
+    padding-bottom: 10px;
+    
+  }  
+    
+  .border-top {
+    &:before {
+    content: "";
+    display: inline-block;
+    border-top: 1px solid $color-gold;
+    border-left: 1px solid $color-gold;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+    &:after {
+    content: "";
+    display: inline-block;
+    border-top: 1px solid $color-gold;
+    border-right: 1px solid $color-gold;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+} 
+
+.border-bottom {
+    &::before {
+        content: "";
+    display: inline-block;
+    border-bottom: 1px solid $color-gold;
+    border-left: 1px solid $color-gold;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    }
+    &::after {
+        content: "";
+    display: inline-block;
+    border-bottom: 1px solid $color-gold;
+    border-right: 1px solid $color-gold;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    }
+}
+
+.section {
+    display: flex;
+}
+.box-left {
+    border-right: 1 px solid $color-gold;
+    padding: 65px 85px 65px 0px;
+    border-right: 1px solid $color-gold;
+}
+
+.text-box {
+    padding: 68px 0px 70px 85px;
+    text-align: center;
+}
+
+
+h3 {
+    font-family: "Roboto";
+    font-weight: 900;
+    font-size: 36px;
+    margin-bottom: 22px;
+}
+.line-1 {
+    width: 100px;
+    border-top: 1px solid $color-gold;
+    margin: 0 auto;
+    margin-bottom: 32px;
+}
+
+h4 {
+    font-family: "Raleway";
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 33px;
+}
+
+.socials {
+    margin-bottom: 56px;
+}
+
+.socials__item {
+    display: inline-block;
+    margin-right: 8px;
+    &:last-child {
+        margin-right: 0px;
+    }
+    a {
+     color: #cccccc;   
+    }
+    .icon-facebook:hover {
+        color: lightblue;
+    }
+}
+
+.sometext {
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 15px;
+    line-height: 24px;
+}
+
+.line-2 { 
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .big-line {
+       width: 20px; 
+        border-top: 4px solid $color-gold; 
+        margin: 0px 5px;
+    }
+    .small-line {
+        width: 10px;
+        border-top: 4px solid $color-gold;
+    }
+}
+
+.view-profile {
+    
+    a {
+        padding: 4px 10px;
+         border: 1px solid $color-gold;
+        display: inline-block; 
+        font-family: "Open sans";
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        text-transform: uppercase;
+        color: #666666;
+        text-decoration: none;
+        &:hover {
+            background-color: #666666;
+            color: #ffff;
+        }
+    }
+}
