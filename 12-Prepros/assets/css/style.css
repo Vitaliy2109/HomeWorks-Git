@@ -174,7 +174,16 @@ h4 {
   color: #cccccc;
 }
 .socials__item .icon-facebook:hover {
-  color: lightblue;
+  color: blue;
+}
+.socials__item .icon-twitter:hover {
+  color: aqua;
+}
+.socials__item .icon-gplus:hover {
+  color: red;
+}
+.socials__item .icon-linkedin:hover {
+  color: blue;
 }
 
 .sometext {
