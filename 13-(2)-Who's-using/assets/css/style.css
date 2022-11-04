@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*===FONTS===*/
+h1 {
+  font-family: Tourney;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 18px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+h2 {
+  font-family: "Roboto";
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 48px;
+  display: inline-block;
+  color: #000000;
+  margin-bottom: 42px;
+  position: relative;
+  left: 121px;
+  letter-spacing: 0.04em;
+}
+
+.title {
+  position: relative;
+}
+
+.title:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 8px;
+  background-color: #000000;
+  top: 22px;
+}
+
+/*===FONTS===*/
+/*====HEADER====*/
+.header {
+  background-color: #ffff;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+.header .container .header__left {
+  align-self: center;
+}
+
+.header .slash {
+  padding: 0px 10px;
+}
+
+.header__left {
+  align-self: center;
+}
+
+.header a, .header span {
+  font-family: Staatliches;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  display: inline-block;
+  text-decoration: none;
+  color: #000000;
+}
+
+/*====HEADER====*/
+/*====LINKS====*/
+a {
+  position: relative;
+}
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #BDBDBD;
+  top: 25px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transition: transform 0.3s;
+}
+
+/*====LINKS====*/
+/*====MAIN====*/
+main {
+  padding-top: 137px;
+  padding-bottom: 750px;
+}
+
+.grid-container {
+  padding-top: 20px;
+  padding-bottom: 18px;
+  display: grid;
+  gap: 30px 0;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #BFBFBF;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+/*====FLIP CARD====*/
+.flip-card {
+  width: 270px;
+  height: 180px;
+  display: grid;
+  justify-self: center;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateX(-180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(-180deg);
+  rotate: 180deg;
+}
