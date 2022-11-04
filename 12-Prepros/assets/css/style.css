@@ -163,8 +163,16 @@ h4 {
   margin-bottom: 56px;
 }
 
+i {
+  border: 2px solid #cccccc;
+  border-radius: 100%;
+  padding: 10px 8px;
+  transition: all 0.2s ease;
+}
+
 .socials__item {
   display: inline-block;
+  position: relative;
   margin-right: 8px;
 }
 .socials__item:last-child {
@@ -174,16 +182,20 @@ h4 {
   color: #cccccc;
 }
 .socials__item .icon-facebook:hover {
-  color: blue;
+  color: rgba(10, 10, 255, 0.699);
+  border: 2px solid;
 }
 .socials__item .icon-twitter:hover {
-  color: aqua;
+  color: #00e0e0;
+  border: 2px solid;
 }
 .socials__item .icon-gplus:hover {
   color: red;
+  border: 2px solid;
 }
 .socials__item .icon-linkedin:hover {
   color: blue;
+  border: 2px solid;
 }
 
 .sometext {
