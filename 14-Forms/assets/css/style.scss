@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    color: #000000;
+    padding: 200px 100px;
+}
+
+.container {
+    max-width: 1440px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    padding: 55px 135px;
+}
+
+
+/*=====SECTION LEFT====*/
+
+section {
+    width: 570px;
+}
+
+label,
+p,
+.radio {
+    font-family: 'roboto';
+    font-weight: 400;
+    color: #545454;
+
+}
+
+label {
+    font-size: 15px;
+    line-height: 22px;
+
+}
+
+p {
+    font-size: 13px;
+    line-height: 18px;
+    color: #969696;
+}
+
+h1 {
+    font-family: 'roboto';
+    font-weight: 500;
+    color: #1C1C1C;
+    font-size: 24px;
+    margin-bottom: 21px;
+}
+
+
+.section {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 36px;
+    padding-bottom: 0px;
+}
+.input, select {
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    outline: none;
+    width: 245px;
+    height: 38px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding: 8px 10px;
+
+    &:focus {
+        border: 1px solid #007bff;
+    }
+}
+
+.form-item {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.input-title {
+    margin-bottom: 7px;
+    display: block;
+}
+
+/*====NAMES====*/
+.names {
+    justify-content: space-between;
+}
+/*====NAMES====*/
+
+/*====EMAIL====*/
+
+.email {
+    flex-direction: column;
+    .input {
+        margin-bottom: 7px;
+        width: 100%;
+    }
+}
+/*====EMAIL====*/
+
+
+
+/*===GENDER=====*/
+
+
+.gender__item {
+    display: flex;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.radio {
+    display: inline-block;
+    position: relative;
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+    appearance: none;
+
+    &:before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #E4E4E4;
+        border-radius: 100%;
+        background-color: #ffff;
+        top: 0.2px;
+        left: 0.2px;
+        transition: all 0.2s ease;
+    }
+
+    &:checked:before {
+        width: 8px;
+        height: 8px;
+        border: 7px solid #007BFF;
+    }
+
+
+}
+/*===GENDER=====*/
+
+/*===LOCATION=====*/
+
+select {
+font-family: Inter;
+font-size: 15px;
+font-weight: 400;
+line-height: 22px;
+color: #545454;
+}
