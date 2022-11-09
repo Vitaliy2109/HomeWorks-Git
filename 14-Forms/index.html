@@ -6,55 +6,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/fonts.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="assets/plugins/formstyler/jquery.formstyler.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/plugins/formstyler/jquery.formstyler.theme.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.min.css" />
   </head>
 
   <body>
     <main>
       <div class="container">
         <section class="section left">
-          <form action="">
+          <form action="" method="post">
             <h1>Create an Account</h1>
             <div class="form-item names">
               <div class="names__item">
-                <label for="first-name" class="input-title">First Name</label>
+                <label for="first-name" class="label">First Name</label>
                 <p><input type="text" id="first-name" class="input" /></p>
               </div>
               <div class="names__item">
-                <label for="last-name" class="input-title">Last Name</label>
+                <label for="last-name" class="label">Last Name</label>
                 <p><input type="text" id="last-name" class="input" /></p>
               </div>
             </div>
             <div class="form-item email">
-              <label for="email" class="input-title">E-mail </label>
-              <p><input type="email" id="email" class="input"/></p>
+              <label for="email" class="label">E-mail </label>
+              <p><input type="email" id="email" class="input" /></p>
               <p>We'll never share your email with anyone else.</p>
             </div>
             <div class="form-item gender">
               <div class="gender__item">
-                <input type="radio" class="radio" id="male" name="gender" />
+                <input
+                  type="radio"
+                  class="radio"
+                  id="male"
+                  name="gender"
+                  checked
+                />
                 <label for="male">Male</label>
               </div>
-            <div class="gender__item">
+              <div class="gender__item">
                 <input type="radio" class="radio" id="female" name="gender" />
                 <label for="female">Female</label>
               </div>
             </div>
             <div class="form-item location">
               <div class="location__item">
-                <label for="country">Country</label>
+                <label for="country" class="label">Country</label>
                 <select name="country" id="country">
-                  <option value="ukr" selected>Ukraine</option>
-                  <option value="eng">England</option>
                   <option value="usa">America</option>
                   <option value="afr">Africa</option>
-                  
+                  <option value="eng">England</option>
+                  <option value="ukr" selected>Ukraine</option>
                 </select>
               </div>
+              <div class="location__item">
+                <label for="city" class="label">City</label>
+                <input type="text" class="input" id="city" />
+              </div>
             </div>
+            <div class="form-item">
+              <button type="submit" id="sign-up" name="sign-up" class="btn">
+                Sign Up
+              </button>
+            </div>
+            <div class="form-item terms-of-use">
+              <p>
+                By clicking the 'Sign Up' button, you confirm that you accept
+                our <br />
+                <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+              </p>
+            </div>
+            <div class="line"></div>
+            <div class="form-item log-in">
+              <p>Have an account?</p>
+              <a href="#">Log In</a>
+            </div>
+          </form>
+        </section>
+        <section class="section right">
+          <form action="" method="post">
+            <h1>Profile</h1>
+            <div class="form-item user-avatar">
+              <div class="user-photo">
+                <img src="assets/img/user-photo.png" alt="" />
+              </div>
+              <div class="photo-file">
+                <input
+                  type="file"
+                  class="file img"
+                  data-placeholder=" "
+                  data-browse=" "
+                />
+                <img
+                  src="assets/img/icon/Icon-Color.svg"
+                  alt=""
+                  class="photo-icon"
+                />
+                <p>Up to 1 MB (300x300 px)</p>
+              </div>
+              <button type="reset" id="reset" class="reset">
+                <img src="assets/img/icon/reset-btn.svg" alt="" />
+              </button>
+            </div>
+            <div class="form-item names">
+              <div class="names__item">
+                <label for="name" class="label">Name</label>
+                <p><input type="text" id="name" class="input" /></p>
+              </div>
+              <div class="names__item">
+                <label for="email-2" class="label">Email</label>
+                <p>
+                  <input
+                    type="email"
+                    name="email-2"
+                    id="email-2"
+                    class="input"
+                  />
+                </p>
+              </div>
+            </div>
+            <div class="form-item location">
+              <div class="location__item">
+                <label for="country-2" class="label">Country</label>
+                <select name="country" id="country-2">
+                  <option value="usa">America</option>
+                  <option value="afr">Africa</option>
+                  <option value="eng">England</option>
+                  <option value="ukr" selected>Ukraine</option>
+                </select>
+              </div>
+              <div class="location__item">
+                <label for="city-2" class="label">City</label>
+                <input type="text" class="input" id="city-2" />
+              </div>
+            </div>
+            <div class="form-item zip">
+              <div class="zip__item">
+                <label for="zip" class="label">Zip Code</label>
+                <p><input type="number" id="zip" class="input-number"/></p>
+              </div>
+              <div class="zip__item">
+               <label for="phone" class="label">Phone Number</label>
+                <p><input type="number" id="phone" class="input-number"/></p>
+              </div>
+            </div>
+            <button type="submit" class="btn update">Update
+            </button>
           </form>
         </section>
       </div>
     </main>
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <script src="assets/plugins/formstyler/jquery.formstyler.min.js"></script>
+    <script>
+      (function ($) {
+        $(function () {
+          $("select, input").styler();
+        });
+      })(jQuery);
+    </script>
   </body>
 </html>

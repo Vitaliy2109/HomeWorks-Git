@@ -13,21 +13,19 @@ body {
 body {
   color: #000000;
   padding: 200px 100px;
+  background-color: #F7F7F7;
 }
 
 .container {
   max-width: 1440px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   padding: 55px 135px;
+  justify-content: space-between;
 }
 
 /*=====SECTION LEFT====*/
-section {
-  width: 570px;
-}
-
 label,
 p,
 .radio {
@@ -39,6 +37,7 @@ p,
 label {
   font-size: 15px;
   line-height: 22px;
+  cursor: pointer;
 }
 
 p {
@@ -60,9 +59,13 @@ h1 {
   flex-direction: column;
   padding: 35px 36px;
   padding-bottom: 0px;
+  width: 570px;
+  background-color: #fff;
 }
 
-.input, select {
+.input,
+select,
+.jq-number__field {
   border: 1px solid #e4e4e4;
   border-radius: 5px;
   outline: none;
@@ -71,8 +74,11 @@ h1 {
   margin-bottom: 20px;
   font-size: 18px;
   padding: 8px 10px;
+  cursor: pointer;
 }
-.input:focus, select:focus {
+.input:focus,
+select:focus,
+.jq-number__field:focus {
   border: 1px solid #007bff;
 }
 
@@ -81,9 +87,10 @@ h1 {
   display: flex;
 }
 
-.input-title {
+.label {
   margin-bottom: 7px;
   display: block;
+  color: #545454;
 }
 
 /*====NAMES====*/
@@ -106,7 +113,7 @@ h1 {
 .gender__item {
   display: flex;
   vertical-align: middle;
-  margin-right: 20px;
+  margin-right: 21px;
 }
 
 .radio {
@@ -115,33 +122,265 @@ h1 {
   width: 22px;
   height: 22px;
   margin-right: 8px;
-  appearance: none;
 }
-.radio:before {
-  content: "";
-  position: absolute;
-  display: inline-block;
+
+.jq-radio {
+  vertical-align: -2px;
   width: 20px;
   height: 20px;
-  border: 1px solid #E4E4E4;
-  border-radius: 100%;
-  background-color: #ffff;
-  top: 0.2px;
-  left: 0.2px;
-  transition: all 0.2s ease;
+  margin-right: 8;
+  border: 1px solid #C3C3C3;
+  background: #fff;
+  box-shadow: none;
+  cursor: pointer;
 }
-.radio:checked:before {
+
+.checked {
+  background-color: #007bff;
+  border: 1px solid #007BFF;
+  transition: all 0.4s ease;
+}
+
+.jq-radio.checked .jq-radio__div {
+  position: relative;
   width: 8px;
   height: 8px;
-  border: 7px solid #007BFF;
+  margin: 0;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: none;
 }
 
 /*===GENDER=====*/
 /*===LOCATION=====*/
-select {
-  font-family: Inter;
+.location {
+  justify-content: space-between;
+}
+.location__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.jq-selectbox__select {
+  width: 245px;
+  height: 38px;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: none;
+  color: #54545480;
+}
+.jq-selectbox__select:hover {
+  background: #fff;
+}
+.jq-selectbox__trigger {
+  border-left: 0px;
+}
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  top: 20px;
+  right: 12px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid #999;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+.jq-selectbox__trigger-arrow:before {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  right: -5px;
+  width: 0;
+  height: 0;
+  border-bottom: 5px solid #999;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+.jq-selectbox:hover .jq-selectbox__trigger-arrow {
+  border-top: 5px solid #007BFF;
+}
+.jq-selectbox:hover .jq-selectbox__trigger-arrow:before {
+  border-bottom: 5px solid #007BFF;
+}
+
+.jq-selectbox__dropdown ul {
+  position: relative;
+  overflow: auto;
+  overflow-x: hidden;
+  list-style: none;
+  border-radius: 4px;
+}
+
+/*====BUTTON====*/
+.btn {
+  font-family: Roboto;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 500;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 6px;
+  border: 0;
   line-height: 22px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn#sign-up {
+  width: 100%;
+  height: 38px;
+  margin-bottom: 22px;
+}
+
+/*====BUTTON====*/
+/*====TERMS-OF-USE====*/
+.terms-of-use {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  justify-content: center;
+}
+.terms-of-use a {
+  text-decoration: none;
+  color: #007BFF;
+}
+.terms-of-use a:hover {
+  text-decoration: underline;
+}
+
+/*====TERMS-OF-USE====*/
+/*====LINE====*/
+.line {
+  width: 100%;
+  border: none;
+  height: 1px;
+  background-color: #e5e5e5;
+  margin-bottom: 20px;
+}
+
+/*====LINE====*/
+/*====LOGIN====*/
+.log-in {
+  justify-content: center;
+  font-family: Roboto;
+  font-size: 15px;
+}
+.log-in p {
+  font-weight: 400;
   color: #545454;
+  margin-right: 20px;
+}
+.log-in a {
+  font-weight: 500;
+  color: #007BFF;
+  text-decoration: none;
+}
+.log-in a:hover {
+  text-decoration: underline;
+}
+
+.right .user-photo img {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}
+
+.photo-file {
+  position: relative;
+}
+
+.photo-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 0;
+}
+
+.file.img {
+  width: 138px;
+  height: 30px;
+  margin-bottom: 9px;
+}
+
+.user-avatar {
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.reset {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  background-color: #fff;
+  position: relative;
+  bottom: 16px;
+  transition: all 0.2s ease;
+}
+.reset:hover {
+  transform: scale(1.1);
+}
+
+.jq-file {
+  width: 270px;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px #E4E4E4;
+}
+
+.jq-file__name {
+  box-sizing: border-box;
+  width: 100%;
+  height: 34px;
+  padding: 0 80px 0 10px;
+  border: 1px solid #E4E4E4;
+  border-bottom-color: #B3B3B3;
+  border-radius: 6px;
+  box-shadow: none;
+  color: #333;
+}
+
+.jq-file.focused .jq-file__name {
+  border: 1px solid #E4E4E4;
+}
+
+.zip {
+  justify-content: space-between;
+}
+
+.jq-number__spin.minus,
+.jq-number__spin.plus {
+  display: none;
+}
+
+.jq-number__field {
+  padding: 0;
+  font-size: 25px;
+  color: #000000;
+  box-shadow: none;
+}
+.jq-number__field:hover {
+  border: 1px solid #e5e5e5;
+}
+
+.jq-number {
+  position: relative;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.jq-number.focused .jq-number__field {
+  border: 1px solid #007BFF;
+}
+
+.update {
+  width: 150px;
+  height: 38px;
 }
