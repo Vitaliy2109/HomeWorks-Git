@@ -1,0 +1,321 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  color: #070707;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+img {
+  vertical-align: top;
+}
+
+.container {
+  width: 90%;
+  max-width: 940px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/*===HEADER====*/
+header {
+  height: 86px;
+  line-height: 80px;
+  margin-bottom: 32px;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+}
+
+#header {
+  box-shadow: 0 1px #c4c4c4;
+}
+
+.main_menu ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Gilroy-Bold";
+}
+
+.main_menu ul li a {
+  text-decoration: none;
+  color: #828282;
+  line-height: 24.51px;
+}
+
+.main_menu ul li a:hover {
+  color: #070707;
+}
+
+/*===HEADER====*/
+p {
+  font-size: 18px;
+  color: #070707;
+  font-family: "Gilroy-Medium";
+  line-height: 22px;
+}
+
+h2,
+h1 {
+  font-size: 34px;
+  line-height: 46px;
+  font-family: "Gilroy-Bold";
+  color: #070707;
+}
+
+/*===SECTION 1 PHOTO====*/
+h1 {
+  font-size: 47.3392px;
+  line-height: 59px;
+  margin-right: 15px;
+}
+
+.lang {
+  color: #828282;
+  font-size: 16px;
+  font-weight: 600;
+  transform: rotate(-90deg);
+  left: 25px;
+  top: -35px;
+}
+.lang span {
+  color: #070707;
+}
+
+.title-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  align-items: flex-end;
+  position: relative;
+}
+.title-box p {
+  position: relative;
+  bottom: 5px;
+}
+
+#photo {
+  margin-bottom: 107px;
+  padding-top: 120px;
+}
+
+.novik-mobile {
+  display: none;
+}
+
+.burger {
+  position: fixed;
+}
+
+/*===SECTION 1 PHOTO====*/
+/*===SECTION 2  ABOUT ME====*/
+#about .container {
+  max-width: 480px;
+  padding: 111px 0px 111px 0px;
+}
+
+.back_col {
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.title_about {
+  font-size: 34px;
+  line-height: 46px;
+  margin-bottom: 21px;
+}
+
+.content p {
+  margin-bottom: 42px;
+}
+
+.content p:last-child {
+  margin-bottom: 0px;
+}
+
+/*===SECTION 2 ABOUT ME====*/
+/*===SECTION 3 SKILLS====*/
+#skills .container {
+  padding: 83px 0px 110px 0px;
+}
+
+.heading {
+  text-align: center;
+}
+
+.heading h2 {
+  margin-bottom: 54px;
+}
+
+.skills_head_text {
+  margin-bottom: 89px;
+}
+
+#skills ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+#skills ul li {
+  text-align: center;
+}
+
+.skills_img {
+  margin-bottom: 28px;
+}
+
+.skills_text {
+  font-family: Gilroy-Bold;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+#figma {
+  margin-bottom: 52px;
+}
+
+.star {
+  margin-right: 5px;
+}
+
+.star:last-child {
+  margin-right: 0px;
+}
+
+.star.opa {
+  opacity: 0.1;
+}
+
+/*===SECTION 3 SKILLS====*/
+/*===SECTION 4 PORTFOLIO====*/
+#portfolio {
+  padding: 107px 0px 30px 0px;
+}
+
+#portfolio .container h2 {
+  margin-bottom: 50px;
+}
+
+.portfolio_img {
+  margin-bottom: 35px;
+}
+
+.portfolio_bottom_text {
+  text-align: center;
+  width: 200px;
+  display: inline-block;
+  font-family: "Gilroy-Medium";
+  font-size: 18px;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.portfolio_bottom_text:last-child {
+  width: 260px;
+  margin-bottom: 103px;
+}
+
+.portfolio_bottom_text a {
+  color: #070707;
+}
+
+#portfolio.back_col {
+  padding-bottom: 0px;
+}
+
+/*===SECTION 4 PORTFOLIO====*/
+/*===FOOTER====*/
+#footer .container {
+  padding: 106px 0px;
+  text-align: center;
+}
+
+/*===CONTACTS====*/
+.contacts {
+  width: 280px;
+  display: inline-block;
+  margin-bottom: 31px;
+}
+
+.text_contacts {
+  line-height: 22px;
+}
+
+.contacts h2 {
+  margin-bottom: 21px;
+}
+
+/*===CONTACTS====*/
+/* BUTTON*/
+.btn {
+  padding: 10px 30px;
+  font-family: "Gilroy-Bold";
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  background-color: #070707;
+  color: #ffff;
+  border-radius: 50px;
+  border: 1px solid #070707;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin-bottom: 82px;
+}
+
+.btn:hover {
+  background-color: #c4c4c4;
+  color: #070707;
+}
+
+/* BUTTON*/
+/*===LINKS====*/
+.links ul {
+  margin-bottom: 42px;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.links ul li {
+  display: inline-block;
+  margin-right: 60px;
+}
+
+.links ul li:last-child {
+  margin-right: 0px;
+}
+
+/*===LINKS====*/
+.footer_text {
+  font-family: "Gilroy-Medium";
+  font-size: 14px;
+  line-height: 17px;
+  color: #828282;
+  text-align: center;
+}
+
+/*===FOOTER====*/
+.portfolio_img img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
