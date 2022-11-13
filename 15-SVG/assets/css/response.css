@@ -1,0 +1,23 @@
+
+
+@media screen and (max-width: 1000px) {
+  
+.footer .container {
+    align-items: center;
+
+    
+}
+}    
+
+@media screen and (max-width: 910px) {
+  .list {
+   flex-direction: column;
+   align-items: center;
+  }
+  .list__item {
+   margin-bottom: 30px;
+  }
+  h1, h2 {
+    text-align: center;
+  }
+}    
