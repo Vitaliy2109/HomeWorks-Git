@@ -455,10 +455,31 @@ h3 {
 
     .links__item {
       margin-right: 23px;
-
+      
       &:last-child {
         margin-right: 0px;
       }
+      a {
+        text-decoration: none;
+        color: #565656;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #565656;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          background-color: #565656;
+        }
+        &:hover i {
+          color: #ffffff;
+          transform: scale(1.09);
+        }
+        i {
+         font-size: 24px; 
+        }
+      }
+
 
     }
 
@@ -480,13 +501,19 @@ h3 {
   }
 }
 
+
+
+
 /*====FOOTER=====*/
 
 /*====ARROW=====*/
 
 .arrow {
+  
   img {
+    position: relative;
     padding-left: 20px;
+    top: 8px;
   }
 }
 

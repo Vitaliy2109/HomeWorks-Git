@@ -1,4 +1,4 @@
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 1030px) {
     nav {
         display: none;
     }
@@ -92,4 +92,65 @@
         margin-bottom: 52px;
     }
     
+}
+ 
+@media screen and (max-width: 390px) {
+    .container {
+        min-width: 300px;
+    }
+    .nav__search {
+        margin-right: 20px;
+    }
+    .section-1 h1 {
+        font-size: 30px;
+        max-width: 300px;
+    }
+    .section-2 h2.title {
+        text-align: center;
+    }
+    .section-2 .infobox {
+        flex-direction: column;
+    }
+    .section-2 .first {
+        flex-direction: column-reverse;
+    }
+    .section-2  .info__text {
+        margin-bottom: 40px;
+    }
+    .section-3 .infobox {
+        flex-direction: column !important;
+    }
+    .section-4 .flex-container {
+        flex-direction: column !important;
+    }
+    .section-4 .info__text {
+        margin-bottom: 50px;
+    }
+    .section-4 .second .info__text {
+        max-height: 100px;
+    }
+    .date p.suptitle{
+        font-size: 16px !important;
+    }
+    .section-5 {
+        visibility: visible;
+    }
+    .section-5 .text {
+        text-align: left !important;
+    }
+    .footer .info-left .title {
+        font-size: 32px;
+    }
+     .footer .info-left .text {
+        font-size: 18px;
+     }
+      .footer .info-left {
+        margin-bottom: 40px ;
+      }
+      .footer .footer-subinfo .text{
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        max-width: 300px !important;
+        
+      }
 }

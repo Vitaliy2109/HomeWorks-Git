@@ -380,6 +380,26 @@ h3 {
 .footer .links .links__item:last-child {
   margin-right: 0px;
 }
+.footer .links .links__item a {
+  text-decoration: none;
+  color: #565656;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #565656;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .links .links__item a:hover {
+  background-color: #565656;
+}
+.footer .links .links__item a:hover i {
+  color: #ffffff;
+  transform: scale(1.09);
+}
+.footer .links .links__item a i {
+  font-size: 24px;
+}
 
 .footer-subinfo {
   width: 100%;
@@ -397,7 +417,9 @@ h3 {
 /*====FOOTER=====*/
 /*====ARROW=====*/
 .arrow img {
+  position: relative;
   padding-left: 20px;
+  top: 8px;
 }
 
 /*====ARROW=====*/
