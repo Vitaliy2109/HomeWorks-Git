@@ -1,0 +1,30 @@
+@media screen and (max-width: 992px) {
+  nav.links {
+    display: none;
+  }
+
+  #section-1 .title-text {
+    font-size: 38px;
+    line-height: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #section-1 .container {
+    position: relative;
+    justify-content: center;
+  }
+  #section-1 .container .left_info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    text-shadow: 1px 1px 2px #ffffff;
+  }
+  #section-1 .container .right_info {
+    width: 100%;
+    max-width: 500px;
+    opacity: 0.5;
+  }
+}

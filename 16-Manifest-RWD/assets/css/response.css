@@ -1,156 +1,160 @@
-@media screen and (max-width: 1030px) {
-    nav {
-        display: none;
-    }
-    .nav__search {
-  margin-right: 40px;
-    }
-    .nav__burger {
-        display: inline-block !important;
-        
-    }
-    .section-1 h1{
-        padding-bottom: 92px !important;
-        font-size: 36px;
-        line-height: 50px;
-    }
-    .container {
-        max-width: 700px !important;
-    }
-    .section-2 .info__photo, .section-2 .img {
-        width: 340px;
-        height: 280px;
-    }
-    .info__text {
-        padding: 0px !important;
-        width: 340px;
-        height: 280px !important;
-    }
-    
-    .first .info__photo {
-        margin-right: 20px !important;
-    }
-    .second  {
-       display: flex;
-       justify-content: space-between;
-    }
-    .section-2 .subtitle {
-        margin-bottom: 29px !important;
-    }
-    .section-2 p {
-        line-height: 27px;
-    }
+@media screen and (max-width: 883px) {
+  html,
+body {
+    overflow-x: hidden;
+  }
 
-    .section-3 .flex-container {
-        flex-direction: column !important;
-    }
-    .section-3 .first, .section-3 .third {
-        flex-direction: row !important;
-    }
-    .section-3 .second {
-        flex-direction: row-reverse !important;
-    }
-   
-    .section-3 .infobox {
-       
-        margin: 0 auto;
-        max-width: 700px !important;
-        justify-content: space-between !important;
-    }
-    .section-3 .info__photo, .section-3 .img {
-        width: 340px;
-        height: 240px;
-        
-    }
-    .section-3 .second .info__text {
-        margin-right: 20px;
-    }
-    .section-3 .third .info__text {
-        margin-left: 20px;
-    } 
-    .section-3 {
-        margin-bottom: 5px !important;
-    }
+  nav {
+    display: none;
+  }
 
-    .section-4 .img {
-        width: 340px;
-        height: 160px;
-    }
-    .section-4 {
-        margin-bottom: 70px !important;
-    }
-    .section-5 {
-        visibility: visible !important;
-    }
+  .nav__search {
+    margin-right: 40px;
+  }
 
-    .footer__info {
-        flex-direction: column;
-        margin-bottom: 40px !important;
-    }
-    .footer__info .info-left {
-        text-align: center;
-        margin-bottom: 52px;
-    }
-    
+  .header .nav__burger {
+    display: inline-block;
+  }
+
+  .container {
+    max-width: 700px !important;
+  }
+
+  .section-1 .section-wrap {
+    height: 320px !important;
+  }
+  .section-1 .section-wrap .container h1 {
+    font-size: 36px;
+    line-height: 50px;
+    padding-top: 30px;
+  }
+
+  .section-2 {
+    margin-bottom: 70px !important;
+  }
+  .section-2 .container .flex-container p {
+    line-height: 27px;
+  }
+  .section-2 .container .flex-container .info__text {
+    flex-basis: 75%;
+  }
+
+  .section-3 {
+    margin-bottom: 70px !important;
+  }
+  .section-3 .container .flex-container {
+    flex-direction: column;
+  }
+  .section-3 .container .flex-container .infobox {
+    flex-direction: row;
+  }
+  .section-3 .container .flex-container .infobox .info__text {
+    flex-basis: 93%;
+  }
+  .section-3 .container .flex-container .second {
+    flex-direction: row-reverse;
+  }
+
+  .section-5 .container {
+    visibility: visible;
+  }
+  .section-5 .container h2.title.last {
+    margin-bottom: 20px;
+  }
+
+  .footer .container .footer__info {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .footer .container .footer__info .info-left {
+    text-align: center;
+    margin-bottom: 52px;
+  }
 }
- 
-@media screen and (max-width: 390px) {
-    .container {
-        min-width: 300px;
-    }
-    .nav__search {
-        margin-right: 20px;
-    }
-    .section-1 h1 {
-        font-size: 30px;
-        max-width: 300px;
-    }
-    .section-2 h2.title {
-        text-align: center;
-    }
-    .section-2 .infobox {
-        flex-direction: column;
-    }
-    .section-2 .first {
-        flex-direction: column-reverse;
-    }
-    .section-2  .info__text {
-        margin-bottom: 40px;
-    }
-    .section-3 .infobox {
-        flex-direction: column !important;
-    }
-    .section-4 .flex-container {
-        flex-direction: column !important;
-    }
-    .section-4 .info__text {
-        margin-bottom: 50px;
-    }
-    .section-4 .second .info__text {
-        max-height: 100px;
-    }
-    .date p.suptitle{
-        font-size: 16px !important;
-    }
-    .section-5 {
-        visibility: visible;
-    }
-    .section-5 .text {
-        text-align: left !important;
-    }
-    .footer .info-left .title {
-        font-size: 32px;
-    }
-     .footer .info-left .text {
-        font-size: 18px;
-     }
-      .footer .info-left {
-        margin-bottom: 40px ;
-      }
-      .footer .footer-subinfo .text{
-        font-size: 16px;
-        letter-spacing: 0.1em;
-        max-width: 300px !important;
-        
-      }
+@media screen and (max-width: 500px) {
+  html,
+body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 300px;
+  }
+
+  .section-1 .section-wrap .container h1 {
+    font-size: 30px;
+    max-width: 300px;
+  }
+
+  .nav__search {
+    margin-right: 20px;
+  }
+
+  .section-2 h2.title {
+    text-align: center;
+  }
+
+  .section-2 .infobox {
+    flex-direction: column;
+  }
+
+  .section-2 .first {
+    flex-direction: column-reverse;
+  }
+
+  .section-3 .container .head {
+    flex-direction: column;
+    align-items: start;
+  }
+  .section-3 .container .head h2 {
+    margin-bottom: 10px;
+  }
+  .section-3 .container .flex-container {
+    gap: 50px;
+  }
+  .section-3 .container .flex-container .infobox {
+    flex-direction: column;
+  }
+  .section-3 .container .flex-container .infobox p.suptitle {
+    font-size: 16px;
+  }
+
+  .section-4 .container .head {
+    flex-direction: column;
+    align-items: start;
+  }
+  .section-4 .container .head h2 {
+    margin-bottom: 10px;
+  }
+  .section-4 .container .flex-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .section-4 .container .flex-container .date p.suptitle {
+    font-size: 16px;
+  }
+
+  .section-5 {
+    visibility: visible;
+  }
+  .section-5 .container .text {
+    text-align: left;
+  }
+
+  .footer .info-left .title {
+    font-size: 32px;
+  }
+
+  .footer .info-left .text {
+    font-size: 18px;
+  }
+
+  .footer .info-left {
+    margin-bottom: 40px;
+  }
+
+  .footer .footer-subinfo .text {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+  }
 }
