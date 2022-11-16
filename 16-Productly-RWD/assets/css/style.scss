@@ -134,6 +134,7 @@ header {
 /*===SECTION 1===*/
 
 #section-1 {
+       
     .container {
         display: flex;
         justify-content: space-between;
@@ -143,7 +144,9 @@ header {
 
     .left_info {
         flex-basis: 48%;
+        
     }
+   
 }
 
 .title-text {

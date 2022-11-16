@@ -52,7 +52,7 @@ gap: 30px;
 }
 
 .item {
-    padding: 15px;
+
    border: 2px solid grey;
    border-radius: 10px;
    transition: all .2s ease;
@@ -62,13 +62,23 @@ gap: 30px;
     align-items: center;
     
 }
+
 .item-18 {
+    grid-column: span 3;
+    display: flex;
     justify-content: space-between;
 }
 
-
+.item-18 p {
+    width: 550px;
+}
 h2 {
     font-size: 25px;
     margin-bottom: 15px;
+    line-height: 60px;
 
+}
+p {
+    font-size: 25px;
+    color: #ffffff;
 }

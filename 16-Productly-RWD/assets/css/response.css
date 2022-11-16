@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media screen and (max-width: 992px) {
   nav.links {
     display: none;
@@ -126,3 +127,9 @@
     display: block;
   }
 }
+@media screen and (max-width: 560px) {
+  #section-1 {
+    height: 62.05vh;
+  }
+}
+/*ГРЯЗНИЙ ХАК БО СЕКСЦІЯ ЗАЛАЗИТЬ НА СЕКЦІЮ))))))))))*/
