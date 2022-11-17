@@ -1,0 +1,68 @@
+@media screen and (max-width: 1610px) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 70px 0px;
+    background-color: #e8e8e8;
+  }
+  .container .section {
+    margin: 0 auto;
+  }
+  .container .button-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .container {
+    background-color: #dedede;
+    padding: 20px 40px;
+  }
+  .container label {
+    font-size: 18px;
+  }
+  .container .section {
+    border-radius: 20px;
+    width: 90%;
+  }
+  .container .section .label {
+    text-align: center;
+  }
+  .container .section .names {
+    flex-direction: column;
+  }
+  .container .section .names input {
+    width: 100%;
+  }
+  .container .section .location {
+    gap: 5px;
+  }
+  .container .section .location .location__item {
+    flex-basis: 48%;
+  }
+  .container .section .location .location__item .jq-selectbox,
+.container .section .location .location__item input,
+.container .section .location .location__item select,
+.container .section .location .location__item .jq-selectbox__select {
+    width: 100%;
+  }
+  .container .section .gender {
+    justify-content: space-around;
+    margin-bottom: 50px;
+  }
+  .container .section .zip {
+    flex-direction: column;
+  }
+  .container .section .zip .jq-number.input-number {
+    width: 100%;
+  }
+  .container .section .zip .jq-number.input-number .jq-number__field {
+    width: 100%;
+  }
+  .container .section .button-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}

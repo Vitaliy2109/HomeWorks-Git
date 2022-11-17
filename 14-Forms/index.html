@@ -15,6 +15,7 @@
       href="assets/plugins/formstyler/jquery.formstyler.theme.css"
     />
     <link rel="stylesheet" href="assets/css/style.min.css" />
+    <link rel="stylesheet" href="assets/css/response.min.css" />
   </head>
 
   <body>
@@ -148,15 +149,18 @@
             <div class="form-item zip">
               <div class="zip__item">
                 <label for="zip" class="label">Zip Code</label>
-                <div><input type="number" id="zip" class="input-number"/></div>
+                <div><input type="number" id="zip" class="input-number" /></div>
               </div>
               <div class="zip__item">
-               <label for="phone" class="label">Phone Number</label>
-                <div><input type="number" id="phone" class="input-number"/></div>
+                <label for="phone" class="label">Phone Number</label>
+                <div>
+                  <input type="number" id="phone" class="input-number" />
+                </div>
               </div>
             </div>
-            <button type="submit" class="btn update">Update
-            </button>
+            <div class="button-wrap">
+              <button type="submit" class="btn update">Update</button>
+            </div>
           </form>
         </section>
       </div>
@@ -172,4 +176,3 @@
     </script>
   </body>
 </html>
-
