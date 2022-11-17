@@ -1,0 +1,46 @@
+@media screen and (max-width: 936px) {
+    .header {
+        
+        .container {
+            padding: 0 30px;
+            flex-direction: row-reverse;
+            .header__left {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 400px;
+                h1 {
+                    display: none;
+                }
+            }
+            .icon-burger {
+                display: inline-block;
+            }
+        }
+    }
+    
+    
+    .container {
+        aside {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 662px) {
+    .header {
+
+        .container{
+            justify-content: space-between;
+            width: 100%;
+            .header__left {
+               width: 33px;
+            }
+            .links {
+                display: none;
+            }
+        
+            
+        }
+
+    }
+}
