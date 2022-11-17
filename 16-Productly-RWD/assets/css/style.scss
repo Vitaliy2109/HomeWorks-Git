@@ -49,8 +49,10 @@ ul li {
 header {
     padding-top: 17px;
     padding-bottom: 17px;
-    margin-bottom: 70px;
-
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 100;
     .container {
         display: flex;
         justify-content: space-between;
@@ -132,9 +134,12 @@ header {
 
 
 /*===SECTION 1===*/
+main {
+    padding-top: 141px;
+}
 
 #section-1 {
-       
+
     .container {
         display: flex;
         justify-content: space-between;
@@ -144,9 +149,9 @@ header {
 
     .left_info {
         flex-basis: 48%;
-        
+
     }
-   
+
 }
 
 .title-text {
@@ -330,6 +335,7 @@ footer .title-text {
 
 input::-webkit-input-placeholder {
     color: #BCD0E5;
+
 }
 
 #user-phone {

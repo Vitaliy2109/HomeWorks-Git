@@ -1,14 +1,4 @@
 @charset "UTF-8";
-@media screen and (max-width: 992px) {
-  nav.links {
-    display: none;
-  }
-
-  #section-1 .title-text {
-    font-size: 38px;
-    line-height: 40px;
-  }
-}
 @media screen and (max-width: 1187px) {
   #section-2 .container .list {
     flex-direction: column;
@@ -36,6 +26,16 @@
   }
   .footer .list {
     justify-content: space-around;
+  }
+}
+@media screen and (max-width: 992px) {
+  nav.links {
+    display: none;
+  }
+
+  #section-1 .title-text {
+    font-size: 38px;
+    line-height: 40px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -118,13 +118,11 @@
   .footer .list .logo {
     display: none;
   }
-}
-@media screen and (max-width: 505px) {
-  #header .header_img {
-    display: none;
+  .footer #form {
+    width: 100%;
   }
-  #header .header_img.tablet {
-    display: block;
+  .footer #form #user-phone {
+    width: 85%;
   }
 }
 @media screen and (max-width: 560px) {
@@ -133,3 +131,36 @@
   }
 }
 /*ГРЯЗНИЙ ХАК БО СЕКСЦІЯ ЗАЛАЗИТЬ НА СЕКЦІЮ))))))))))*/
+@media screen and (max-width: 505px) {
+  #header .header_img {
+    display: none;
+  }
+  #header .header_img.tablet {
+    display: block;
+  }
+}
+@media screen and (max-width: 350px) {
+  #left_btn {
+    margin-right: 10px;
+  }
+
+  main {
+    padding-top: 100px;
+  }
+
+  .left_info {
+    width: 100%;
+    text-align: center;
+  }
+
+  h1.title-text {
+    width: 100%;
+  }
+
+  .footer .link {
+    font-size: 16px;
+  }
+  .footer .footer__links h3.title-text {
+    font-size: 16px;
+  }
+}

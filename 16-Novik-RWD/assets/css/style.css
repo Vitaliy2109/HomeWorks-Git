@@ -219,19 +219,23 @@ h1 {
   margin-bottom: 35px;
 }
 
+.portfolio_block {
+  width: 100%;
+}
+
 .portfolio_bottom_text {
-  text-align: center;
-  width: 200px;
-  display: inline-block;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Gilroy-Medium";
   font-size: 18px;
   line-height: 22px;
-  white-space: nowrap;
+  margin-bottom: 99px;
 }
 
-.portfolio_bottom_text:last-child {
-  width: 260px;
-  margin-bottom: 103px;
+.portfolio_bottom_text.last a {
+  margin-bottom: 99px;
 }
 
 .portfolio_bottom_text a {
@@ -293,15 +297,12 @@ h1 {
   display: flex;
   list-style-type: none;
   justify-content: center;
+  width: 100%;
+  gap: 60px;
 }
 
 .links ul li {
   display: inline-block;
-  margin-right: 60px;
-}
-
-.links ul li:last-child {
-  margin-right: 0px;
 }
 
 /*===LINKS====*/
