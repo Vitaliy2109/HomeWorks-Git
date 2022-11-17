@@ -407,12 +407,15 @@ h3 {
 .footer .links .links__item a:hover {
   background-color: #565656;
 }
-.footer .links .links__item a:hover i {
+.footer .links .links__item a:hover i::before {
   color: #ffffff;
   transform: scale(1.09);
 }
 .footer .links .links__item a i {
   font-size: 24px;
+}
+.footer .links .links__item a .icon-footer-twitter-icon {
+  font-size: 21px;
 }
 
 .footer-subinfo {
@@ -430,7 +433,8 @@ h3 {
 
 /*====FOOTER=====*/
 /*====ARROW=====*/
-.section-3 .arrow, .section-4 .arrow {
+.section-3 .arrow,
+.section-4 .arrow {
   display: flex;
   width: 112px;
   justify-content: space-between;

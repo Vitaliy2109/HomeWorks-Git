@@ -55,12 +55,14 @@ img {
   position: fixed;
   background-color: #ffffff;
   width: 100%;
-  box-shadow: 0 1px  #dddddd;
+  box-shadow: 0 1px #dddddd;
+
   .container {
     display: flex;
     justify-content: space-between;
 
   }
+
   .logo {
     img {
       object-fit: none;
@@ -72,10 +74,11 @@ img {
   display: flex;
 
   .nav__list {
-   display: flex;
+    display: flex;
     gap: 42px;
     -webkit-gap: 42px;
     margin-right: 84px;
+
     .nav__link {
 
       a {
@@ -171,15 +174,17 @@ p {
 
 .section-1 {
   padding-top: 100px;
-   .section-wrap {
-     background: url(../img/section-1-bg-image.png) no-repeat;
-     height: 600px;
-     margin-bottom: 90px;
-     width: 100%;
-     background-size: 100% 100%;
-   }
+
+  .section-wrap {
+    background: url(../img/section-1-bg-image.png) no-repeat;
+    height: 600px;
+    margin-bottom: 90px;
+    width: 100%;
+    background-size: 100% 100%;
+  }
+
   h1 {
-    
+
     max-width: 770px;
     padding-top: 100px;
   }
@@ -486,6 +491,7 @@ h3 {
 
     .links__item {
       margin-right: 23px;
+     
 
       &:last-child {
         margin-right: 0px;
@@ -504,16 +510,18 @@ h3 {
         &:hover {
           background-color: #565656;
         }
-
-        &:hover i {
-          
-          color: #ffffff;
-          transform: scale(1.09);
-        }
-
+         &:hover i::before {
+           color: #ffffff;
+           transform: scale(1.09);
+         }
+      
         i {
           font-size: 24px;
-          
+
+        }
+
+        .icon-footer-twitter-icon {
+          font-size: 21px;
         }
       }
 
@@ -546,12 +554,13 @@ h3 {
 /*====ARROW=====*/
 
 
-.section-3, .section-4 {
+.section-3,
+.section-4 {
   .arrow {
     display: flex;
     width: 112px;
     justify-content: space-between;
-   align-items: center;
+    align-items: center;
   }
 }
 
