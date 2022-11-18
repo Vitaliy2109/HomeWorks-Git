@@ -3,7 +3,8 @@
         flex-direction: column;
         gap: 30px;
         padding: 70px 0px;
-         background-color: darken($color: #f7f7f7, $amount: 6);
+        background-color: darken($color: #f7f7f7, $amount: 6);
+
         .section {
             margin: 0 auto;
 
@@ -81,14 +82,33 @@
                 margin-bottom: 30px;
             }
         }
+
         .user-avatar {
             flex-direction: column;
             gap: 30px;
         }
     }
 }
-@media screen and (max-width:324px) {
-    .gender, .location {
+
+@media screen and (max-width:415px) {
+    .location {
         flex-direction: column;
+    }
+       .container {
+           padding: 20px 10px;
+
+           h1 {
+               font-size: 20px;
+               text-align: center;
+           }
+       }
+
+}
+
+
+@media screen and (max-width:243px) {
+    .gender__item {
+        
+        margin-right: 0px;
     }
 }

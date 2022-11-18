@@ -70,8 +70,21 @@
     gap: 30px;
   }
 }
-@media screen and (max-width: 324px) {
-  .gender, .location {
+@media screen and (max-width: 415px) {
+  .location {
     flex-direction: column;
+  }
+
+  .container {
+    padding: 20px 10px;
+  }
+  .container h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 243px) {
+  .gender__item {
+    margin-right: 0px;
   }
 }
