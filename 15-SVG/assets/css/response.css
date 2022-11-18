@@ -10,14 +10,21 @@
 }    
 
 @media screen and (max-width: 910px) {
+  body .main .container .list {
+    padding: 0 30px;
+  }
   .list {
    flex-direction: column;
    align-items: center;
   }
   .list__item {
    margin-bottom: 30px;
+   max-width: 340px;
   }
   h1, h2 {
     text-align: center;
+  }
+  .svg, h3, p, a {
+    display: inline-block;
   }
 }    

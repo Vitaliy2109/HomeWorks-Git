@@ -73,12 +73,17 @@ ol {
 .list .list__item {
   width: 370px;
   height: 340px;
-  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #E5EAF4;
   border-radius: 8px;
 }
 .list .list__item:hover {
   border: 1px solid #3DB370;
+}
+.list .list__item .content-box {
+  max-width: 290px;
 }
 
 .svg {

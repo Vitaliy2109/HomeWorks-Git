@@ -65,4 +65,13 @@
     justify-content: center;
     margin-bottom: 30px;
   }
+  .container .user-avatar {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 324px) {
+  .gender, .location {
+    flex-direction: column;
+  }
 }
