@@ -1,0 +1,33 @@
+@media screen and (max-width:1070px) {
+    .container.flex {
+        flex-direction: column;
+        gap: 50px;
+        .photo-box {
+            max-width: 320px;
+            max-height: 320px;
+        }
+        .center-line {
+            height: 1px;
+            width: 100%;
+            border-top: 1px solid #ffcc00;
+            margin: 0 30px;
+
+        }
+        .box-right {
+            h3 {
+                margin-bottom: 15px;
+            }
+            .line-1 {
+            margin-bottom: 15px;
+            }
+            ul.socials {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+@media screen and (max-width:660px) {
+    body {
+        padding: 80px 10px;
+    }
+}
