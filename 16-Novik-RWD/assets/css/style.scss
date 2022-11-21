@@ -400,11 +400,12 @@ h1 {
     padding-top: 66px;
     transform: translatex(-100vh);
     transition: all .4s ease;
-    left: 26px;
+    
    ul li {
     list-style-type: none ;
    }
     .main_menu__mobile {
+        margin-left: 26px;
         li {
             margin-bottom: 68px;
             
