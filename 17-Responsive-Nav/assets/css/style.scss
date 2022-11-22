@@ -1,0 +1,161 @@
+$base-size: 16;
+
+@mixin fz($size_px) {
+  font-size: ($size_px / $base-size) * 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  @include fz(16);
+  background-color: #161D31;
+  font-family: 'Montserrat';
+  font-weight: 400;
+}
+
+a,
+button {
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+/*====HEADER====*/
+
+#header {
+  padding-top: 30px;
+  padding-bottom: 10px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #283046;
+    border-radius: 10px;
+    padding: 0 20px;
+    height: 80px;
+
+    .list {
+      display: flex;
+
+    }
+
+    .nav__left {
+      .list {
+        display: flex;
+        gap: 20px;
+
+        li {
+          width: 26px;
+          height: 26px;
+          position: relative;
+
+          .icon {
+            font-size: 25px;
+            cursor: pointer;
+
+            &.icon-L-1 {
+              font-size: 20px;
+              position: absolute;
+              top: 2px;
+              /*Костиль*/
+
+            }
+          }
+
+          &:hover .icon:before {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    .nav__right {
+      display: flex;
+      align-items: center;
+
+      .lang {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-right: 60px;
+        cursor: pointer;
+
+        .lang__img {
+          width: 26px;
+          height: 26px;
+        }
+
+        h2 {
+          font-size: 18px;
+          color: #BDBDBD;
+          font-weight: 400;
+          &:hover {
+            color: #fff;
+          }
+        }
+
+      }
+
+      .list {
+        display: flex;
+        gap: 20px;
+        margin-right: 50px;
+
+        .icon {
+          font-size: 27px;
+          cursor: pointer;
+
+        }
+
+        li {
+          &:hover .icon:before {
+            color: #fff;
+          }
+        }
+
+      }
+
+      .user-avatar {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+      }
+
+    }
+
+  }
+}
+/*====HEADER====*/
+
+#main {
+  .container {
+    max-width: 1319px;
+  }
+}
