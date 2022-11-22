@@ -6,11 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RWD</title>
     <link rel="stylesheet" href="assets/css/fonts.css" />
-    <link rel="stylesheet" href="assets/css/response.min.css" />
+
     <link rel="stylesheet" href="assets/css/icons.css" />
+    <link rel="stylesheet" href="assets/css/hamburgers.min.css" />
     <link rel="stylesheet" href="assets/css/style.min.css" />
+    <link rel="stylesheet" href="assets/css/response.min.css" />
   </head>
   <body>
+    <div
+      class="hamburger hamburger--vortex"
+      onclick="toggleMenu()"
+      id="hamburger"
+    >
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+    </div>
+    <div id="hamburger-bg"></div>
+    <div id="mobile-menu-wrap" onclick="toggleMenu()"></div>
+
+    <div class="mobile_navigation navigation" id="mobile_navigation">
+      <nav>
+        <ul class="nav__list">
+          <li class="logo"><img src="assets/img/logo.svg" alt=""></li>
+          <li class="nav__link"><a href="#">home</a></li>
+          <li class="nav__link"><a href="#">about</a></li>
+          <li class="nav__link"><a href="#">works</a></li>
+          <li class="nav__link"><a href="#">blog</a></li>
+          <li class="nav__link last"><a href="#">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
     <header class="header">
       <div class="container">
         <div class="logo">
@@ -28,9 +55,6 @@
           </nav>
           <div class="nav__search">
             <img src="assets/img/search.svg" alt="" class="search" />
-          </div>
-          <div class="nav__burger">
-            <img src="assets/img/hamburger.svg" alt="" class="burger" />
           </div>
         </div>
       </div>
@@ -256,5 +280,28 @@
         </div>
       </div>
     </footer>
+    <script>
+      function toggleMenu() {
+        document.getElementById("hamburger").classList.toggle("is-active");
+        document.getElementById("mobile_navigation").classList.toggle("open");
+        document.getElementById("hamburger-bg").classList.toggle("open");
+        document.getElementById("mobile-menu-wrap").classList.toggle("open");
+      }
+      /*======Цей скрипт знайшов в інтернеті, для плавного скролу на сторінці=======*/
+      const anchors = document.querySelectorAll('a[href*="#"]');
+
+      for (let anchor of anchors) {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const blockID = anchor.getAttribute("href").substr(1);
+
+          document.getElementById(blockID).scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        });
+      }
+    </script>
   </body>
 </html>
