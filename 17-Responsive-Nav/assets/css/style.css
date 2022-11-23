@@ -122,6 +122,139 @@ ol {
 }
 
 /*====HEADER====*/
+/*====MAIN====*/
 #main .container {
   max-width: 1319px;
+}
+
+/*====ASIDE====*/
+#aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: 110px;
+  background-color: #283046;
+  transition: all 0.3s ease;
+}
+#aside .logo {
+  width: 32px;
+  height: 32px;
+  margin-top: 30px;
+  margin-bottom: 41px;
+}
+#aside .arrow {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -10px;
+  top: 36px;
+  cursor: pointer;
+  transition: all 0.3 ease;
+  transform: rotate(-180deg);
+  transition: all 0.3s ease;
+}
+#aside .arrow img {
+  transition: all 0.2s ease;
+}
+#aside .arrow img:hover {
+  transform: scale(1.6);
+}
+#aside .subtext {
+  color: #BDBDBD;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+#aside .list {
+  width: 100%;
+}
+#aside .list__item {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#aside .list__item i {
+  transition: all 0.3s ease;
+}
+#aside .list__item:hover {
+  background-color: #9E8CFC;
+}
+#aside .list__item:hover i:before {
+  color: #ffffff;
+}
+#aside .list__item:hover .subtext {
+  color: #ffffff;
+}
+#aside .list__item i {
+  font-size: 31px;
+  margin-bottom: 10px;
+}
+#aside .list__item .icon-notify {
+  position: relative;
+}
+#aside .list__item .icon-notify img {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -6px;
+  right: -14px;
+}
+#aside .dashboard {
+  margin-bottom: 34px;
+}
+#aside .purple-line {
+  width: 13px;
+  height: 4px;
+  border-top: 4px solid #9E8CFC;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 15px;
+}
+#aside .purple-line:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -14px;
+  width: 9px;
+  height: 4px;
+  background-color: #9E8CFC;
+  border-radius: 10px;
+}
+#aside .purple-line:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -14px;
+  width: 9px;
+  height: 4px;
+  background-color: #9E8CFC;
+  border-radius: 10px;
+}
+
+#aside.closed {
+  width: 80px;
+}
+#aside.closed .arrow {
+  transform: rotate(0deg);
+}
+#aside.closed .subtext {
+  visibility: hidden;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+#aside.closed .list__item {
+  justify-content: center;
+}
+#aside.closed .list__item i {
+  margin-bottom: 0;
 }

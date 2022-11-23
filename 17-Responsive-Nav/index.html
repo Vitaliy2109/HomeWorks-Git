@@ -5,11 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resposive Navigation</title>
-    <link rel="stylesheet" href="assets/css/header-icons.css" />
+    <link rel="stylesheet" href="assets/css/icons.css" />
     <link rel="stylesheet" href="assets/css/fonts.css" />
     <link rel="stylesheet" href="assets/css/style.min.css" />
   </head>
   <body>
+    <aside id="aside">
+      <div class="logo">
+        <img src="assets/img/aside-img/logo.png" alt="" />
+      </div>
+      <div class="arrow" onclick="toggleMenu()">
+        <img src="assets/img/aside-img/arrow.svg" alt="" />
+      </div>
+      <div class="list__item dashboard">
+        <i class="icon-aside-1"></i>
+        <p class="subtext">Dachboard</p>
+      </div>
+      <div class="purple-line"></div>
+      <ul class="list">
+        <li class="list__item">
+          <i class="icon-aside-2 icon-notify">
+            <img src="assets/img/aside-img/message-1.svg" alt="" />
+          </i>
+
+          <p class="subtext">Email</p>
+        </li>
+        <li class="list__item">
+          <i class="icon-aside-3 icon-notify">
+            <img src="assets/img/aside-img/message-2.svg" alt=""
+          /></i>
+          <p class="subtext">Chats</p>
+        </li>
+        <li class="list__item">
+          <i class="icon-aside-4 icon-notify">
+            <img src="assets/img/aside-img/message-3.svg" alt=""
+          /></i>
+          <p class="subtext">Calendar</p>
+        </li>
+        <li class="list__item">
+          <i class="icon-aside-5"></i>
+          <p class="subtext">News</p>
+        </li>
+        <li class="list__item">
+          <i class="icon-aside-6"></i>
+          <p class="subtext">Knowledge</p>
+        </li>
+        <li class="list__item">
+          <i class="icon-aside-7"></i>
+          <p class="subtext">File manager</p>
+        </li>
+        <li class="list__item">
+          <i class="icon-aside-8"></i>
+          <p class="subtext">Leaflet Maps</p>
+        </li>
+      </ul>
+    </aside>
     <header id="header">
       <div class="container">
         <nav class="nav__left">
@@ -33,7 +83,7 @@
             <li><i class="icon-r-4 icon"></i></li>
           </ul>
           <div class="user-avatar">
-            <img src="assets/img/header-img/Avatar (2).svg" alt="" />
+            <img src="assets/img/header-img/Avatar.svg" alt="" />
           </div>
         </nav>
       </div>
@@ -44,5 +94,10 @@
       </div>
     </main>
     <footer id="footer"></footer>
+    <script>
+      function toggleMenu() {
+        document.getElementById("aside").classList.toggle("closed");
+      }
+    </script>
   </body>
 </html>
