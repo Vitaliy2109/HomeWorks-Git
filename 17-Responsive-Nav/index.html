@@ -7,6 +7,7 @@
     <title>Resposive Navigation</title>
     <link rel="stylesheet" href="assets/css/icons.css" />
     <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/response.min.css" />
     <link rel="stylesheet" href="assets/css/style.min.css" />
   </head>
   <body>
@@ -46,22 +47,25 @@
           <i class="icon-aside-5"></i>
           <p class="subtext">News</p>
         </li>
-        <li class="list__item">
+        <li class="list__item mobile">
           <i class="icon-aside-6"></i>
           <p class="subtext">Knowledge</p>
         </li>
-        <li class="list__item">
+        <li class="list__item mobile">
           <i class="icon-aside-7"></i>
           <p class="subtext">File manager</p>
         </li>
-        <li class="list__item">
+        <li class="list__item mobile">
           <i class="icon-aside-8"></i>
           <p class="subtext">Leaflet Maps</p>
         </li>
       </ul>
     </aside>
-    <header id="header">
+    <header id="header" class="closed">
       <div class="container">
+        <div class="arrow" onclick="headerToggleMenu()">
+          <img src="assets/img/aside-img/arrow.svg" alt="" />
+        </div>
         <nav class="nav__left">
           <ul class="list">
             <li><i class="icon-L-1 icon"></i></li>
@@ -97,6 +101,9 @@
     <script>
       function toggleMenu() {
         document.getElementById("aside").classList.toggle("closed");
+      }
+      function headerToggleMenu() {
+        document.getElementById("header").classList.toggle("closed");
       }
     </script>
   </body>

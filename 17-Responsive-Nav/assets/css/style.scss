@@ -44,6 +44,7 @@ ol {
   width: 90%;
   max-width: 1170px;
   margin: 0 auto;
+
 }
 
 /*====HEADER====*/
@@ -51,7 +52,9 @@ ol {
 #header {
   padding-top: 30px;
   padding-bottom: 10px;
-
+  position: fixed;
+  width: 100%;
+  transition: all .5s ease;
   .container {
     display: flex;
     justify-content: space-between;
@@ -60,6 +63,17 @@ ol {
     border-radius: 10px;
     padding: 0 20px;
     height: 80px;
+    
+    .arrow {
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      top: 15px;
+      left: -10px;
+      transform: rotate(90deg);
+      transition: all .3s ease;
+      display: none;
+    }
 
     .list {
       display: flex;
@@ -156,10 +170,17 @@ ol {
 
 /*====HEADER====*/
 
+/*====HEADER==MOBILE====*/
+
+
+
+/*====HEADER==MOBILE====*/
 
 /*====MAIN====*/
 
 #main {
+  padding-top: 120px;
+
   .container {
     max-width: 1319px;
   }
@@ -176,6 +197,7 @@ ol {
   width: 110px;
   background-color: #283046;
   transition: all .3s ease;
+  z-index: 1000;
 
   .logo {
     width: 32px;
@@ -197,11 +219,12 @@ ol {
 
     img {
       transition: all .2s ease;
+
       &:hover {
         transform: scale(1.6);
-       
+
       }
-      
+
     }
   }
 
@@ -211,6 +234,7 @@ ol {
     white-space: nowrap;
     transition: all .3s ease;
     opacity: 1;
+
   }
 
   .list {
@@ -305,7 +329,7 @@ ol {
   .arrow {
     transform: rotate(0deg);
 
-    img {}
+    
   }
 
   .subtext {
@@ -313,6 +337,7 @@ ol {
     overflow: hidden;
     transition: all .3s ease;
     opacity: 0;
+  
   }
 
   .list__item {
