@@ -13,7 +13,10 @@
   <body>
     <aside id="aside">
       <div class="logo">
-        <img src="assets/img/aside-img/logo.png" alt="" />
+        <div class="img-wrap-logo">
+          <img src="assets/img/aside-img/logo.png" alt="" />
+        </div>
+        <p class="logo-text">LightBoard</p>
       </div>
       <div class="arrow" onclick="toggleMenu()">
         <img src="assets/img/aside-img/arrow.svg" alt="" />
@@ -22,13 +25,16 @@
         <i class="icon-aside-1"></i>
         <p class="subtext">Dachboard</p>
       </div>
-      <div class="purple-line"></div>
+
+      <div class="title-wrap mobile">
+        <p class="title">apps</p>
+        <div class="purple-line"></div>
+      </div>
       <ul class="list">
         <li class="list__item">
           <i class="icon-aside-2 icon-notify">
             <img src="assets/img/aside-img/message-1.svg" alt="" />
           </i>
-
           <p class="subtext">Email</p>
         </li>
         <li class="list__item">
@@ -60,6 +66,50 @@
           <p class="subtext">Leaflet Maps</p>
         </li>
       </ul>
+      <div class="title-wrap">
+        <p class="title">Auth pages</p>
+        <div class="purple-line"></div>
+      </div>
+      <ul class="list second">
+        <li class="list__item">
+          <i class="icon-profile-1"> </i>
+          <p class="subtext">Profile</p>
+        </li>
+        <li class="list__item">
+          <i class="icon-lock"></i>
+          <p class="subtext">Permissions</p>
+        </li>
+        <li class="list__item">
+          <i class="icon-log-out"></i>
+          <p class="subtext">Log Out</p>
+        </li>
+      </ul>
+      <div class="title-wrap">
+        <p class="title">User Interface</p>
+        <div class="purple-line"></div>
+      </div>
+      <ul class="list third">
+        <li class="list__item">
+          <i class="icon-eye"> </i>
+          <p class="subtext">Feather</p>
+        </li>
+        <li class="list__item">
+          <i class="icon-wallet"></i>
+          <p class="subtext">Ecommerce</p>
+        </li>
+        <li class="list__item">
+          <i class="icon-lab"></i>
+          <p class="subtext">Components</p>
+        </li>
+        <li class="list__item">
+          <i class="icon-page"></i>
+          <p class="subtext">Pages</p>
+        </li>
+        <li class="list__item">
+          <i class="icon-pen"></i>
+          <p class="subtext">Editor</p>
+        </li>
+      </ul>
     </aside>
     <header id="header" class="closed">
       <div class="container">
@@ -68,10 +118,10 @@
         </div>
         <nav class="nav__left">
           <ul class="list">
-            <li><i class="icon-L-1 icon"></i></li>
-            <li><i class="icon-L-2 icon"></i></li>
-            <li><i class="icon-L-3 icon"></i></li>
-            <li><i class="icon-L-4 icon"></i></li>
+            <li><i class="icon-mail icon"></i></li>
+            <li><i class="icon-aside-3 icon"></i></li>
+            <li><i class="icon-calendar icon"></i></li>
+            <li><i class="icon-star icon"></i></li>
           </ul>
         </nav>
         <nav class="nav__right">
@@ -81,17 +131,18 @@
             </div>
             <h2>English</h2>
           </div>
+
           <ul class="list">
-            <li><i class="icon-r-2 icon"></i></li>
-            <li><i class="icon-r-3 icon"></i></li>
-            <li><i class="icon-r-4 icon"></i></li>
+            <li><i class="icon-change-theme icon"></i></li>
+            <li><i class="icon-search-1 icon"></i></li>
+            <li><i class="icon-set icon"></i></li>
           </ul>
           <div class="user-avatar">
             <img src="assets/img/header-img/Avatar.svg" alt="" />
           </div>
         </nav>
         <div class="theme">
-          <a href="Responsive-nav-white-theme/index(white).html"
+          <a href="../index.html"
             ><img src="assets/img/main-img/day_and_night.svg" alt=""
           /></a>
         </div>
@@ -99,7 +150,7 @@
     </header>
     <main id="main">
       <div class="container">
-        <img src="assets/img/main-img/bg-dark.png" alt="" />
+        <img src="assets/img/main-img/bg.png" alt="" />
       </div>
     </main>
     <footer id="footer"></footer>

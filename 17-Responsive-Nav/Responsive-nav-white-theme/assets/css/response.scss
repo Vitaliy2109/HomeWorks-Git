@@ -1,4 +1,4 @@
-@media screen and (max-width: 1430px) {
+@media screen and (max-width: 1630px) {
     body {
         #header {
             .container {
@@ -20,14 +20,21 @@
             width: 97%;
             flex-direction: row;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
             border-radius: 20px 20px 0 0;
+            padding: 0 30px;
+            gap: 30px;
 
             .logo {
                 margin: 0;
+                width: 30px;
+
+                .logo-text {
+                    display: none;
+                }
             }
 
             .arrow {
@@ -35,7 +42,7 @@
                 height: 30px;
                 top: -13px;
                 right: 3px;
-                transform: rotate(90deg);
+                transform: rotate(-90deg);
 
                 img:hover {
                     transform: scale(1.2);
@@ -45,6 +52,24 @@
             .dashboard {
                 width: auto;
                 margin-bottom: 0px;
+                flex-direction: column;
+                padding: 0;
+                height: 100%;
+                width: 103px;
+                justify-content: center;
+            }
+
+            .title-wrap.mobile {
+                width: auto;
+                display: block;
+
+                .title {
+                    display: none;
+                }
+
+                .purple-line {
+                    display: block;
+                }
             }
 
             .purple-line {
@@ -74,15 +99,25 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
-                max-width: 80%;
-                gap: 20px;
+                gap: 10px;
+                margin-bottom: 0;
                 height: 100%;
-                margin-bottom: 0px;
+
                 .list__item {
                     padding: 0;
                     justify-content: center;
-                    height: 100%;
+                    flex-direction: column;
                 }
+
+                &.third,
+                &.second {
+                    display: none;
+                }
+            }
+
+            .title-wrap {
+                display: none;
+
             }
         }
 
@@ -91,7 +126,26 @@
             height: 80px;
 
             .arrow {
-                transform: rotate(270deg);
+                transform: rotate(-270deg);
+            }
+
+            .title-wrap {
+                display: none;
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width:990px) {
+    body {
+        #aside {
+            .list {
+                .list__item {
+                    &.mobile {
+                        display: none;
+                    }
+                }
             }
         }
     }
@@ -100,28 +154,33 @@
 @media screen and (max-width: 758px) {
     body {
         #header {
-            height: 60%;
+            height: 62%;
             width: 90px;
             right: 10px;
             bottom: 20px;
 
+
             &.closed {
                 transform: translatey(70%) translateX(20px);
 
-                .arrow {
-                    transform: rotate(-90deg);
+                .container {
+                    .arrow {
+                        transform: rotate(90deg);
 
+                    }
                 }
+
             }
 
             .container {
                 flex-direction: column;
                 height: 100%;
                 padding: 40px 0 40px 0;
-                box-shadow: 3px 2px 2px 2px #696969;
+                 box-shadow: 0px 0px 30px  rgba(0, 0, 0, 0.15);
 
                 .arrow {
                     display: block;
+                    transform: rotate(-90deg);
                 }
 
                 .nav__left {
@@ -163,13 +222,16 @@
             top: 0;
             border-radius: 10px;
             margin-top: 20px;
+            gap: 10px;
 
-            .purple-line {
+            .title-wrap.mobile {
                 display: none;
             }
 
+
+
             .logo {
-                margin: 10px;
+                margin: 0
             }
 
             .list {
@@ -177,6 +239,7 @@
 
                 .list__item {
                     height: 100%;
+                    padding: 0;
 
                     .subtext {
                         visibility: visible;
@@ -196,11 +259,10 @@
 
             .arrow {
                 transition: all .3s ease;
-                transform: rotate(180deg);
+                transform: rotate(0deg);
                 top: 85px;
                 right: -3px;
             }
-           
 
             &.closed {
                 width: 88px;
@@ -213,7 +275,7 @@
                 }
 
                 .arrow {
-                    transform: rotate(0);
+                    transform: rotate(180deg);
                     top: 85px;
                     right: -3px;
                 }
