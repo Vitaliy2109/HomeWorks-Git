@@ -25,8 +25,8 @@
         display: none;
         
     }
-    .lang {
-        display: none;
+    #photo .lang {
+     display: none; 
     }
     .title-box {
         flex-direction: column;
@@ -45,6 +45,9 @@
         display: none;
     }
     .novik-mobile {
+        display: block;
+    }
+    .burger {
         display: block;
     }
 }    

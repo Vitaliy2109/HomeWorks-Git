@@ -100,13 +100,15 @@ h1 {
     color: #828282;
     font-size: 16px;
     font-weight: 600;
-    transform: rotate(-90deg);
-    left: 25px;
-    top: -35px;
-
     span {
         color: #070707;
     }
+}
+
+#photo .lang {
+    left: 25px;
+    top: -35px;
+    transform: rotate(-90deg);
 }
 
 
@@ -136,6 +138,9 @@ h1 {
 
 .burger {
     position: fixed;
+    width: 33px;
+    height: 20px;
+   
 }
 
 
@@ -253,7 +258,7 @@ h1 {
 
 .portfolio_block {
     width: 100%;
-    
+
 }
 
 
@@ -268,6 +273,7 @@ h1 {
     margin-bottom: 99px;
 
 }
+
 .portfolio_bottom_text.last a {
     margin-bottom: 99px;
 }
@@ -276,7 +282,7 @@ h1 {
 
 .portfolio_bottom_text a {
     color: #070707;
-    
+
 }
 
 #portfolio.back_col {
@@ -344,12 +350,12 @@ h1 {
     justify-content: center;
     width: 100%;
     gap: 60px;
-    
+
 }
 
 .links ul li {
     display: inline-block;
-    
+
 }
 
 
@@ -366,6 +372,8 @@ h1 {
 
 /*===FOOTER====*/
 
+/*=====MOBILE MENU====*/
+
 .portfolio_img {
     img {
         width: 100%;
@@ -376,9 +384,64 @@ h1 {
 
 
 .burger {
-    position: sticky;
-    margin-right: 30px;
-    float: right;
-    margin-top: 10px;
+    position: fixed;
+    right: 40px;
+    top: 80px;
+    z-index: 1001;
+    display: none;
+}
+
+.mobile__menu {
+    
+    position: fixed;
+    left: 0;
     top: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(4px);
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    padding-top: 66px;
+    transform: translatex(-100vh);
+    transition: all .4s ease;
+   ul li {
+    list-style-type: none ;
+   }
+    .main_menu__mobile {
+        li {
+            margin-bottom: 68px;
+            
+            a {
+                text-decoration: none;
+                color: #828282;
+                font-family: 'Gilroy-Bold';
+                font-size: 34px;
+                line-height: 42px;
+
+                &:hover {
+                    color: #090909;
+                }
+
+            }
+        }
+    }
+    .lang-wrap {
+        width: 100%;
+        position: relative;
+       
+    }
+    .lang {
+        position: absolute;
+        display: inline-block;
+        transform: rotate(90deg);
+        font-size: 34px;
+        right: 0;
+        bottom: 123px;
+        line-height: 42.09px;
+        
+    }
+    // transform: translateX(-100px);
+}
+.mobile__menu.open {
+    transform: translatex(0);
 }
