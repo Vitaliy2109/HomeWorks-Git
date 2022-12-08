@@ -73,11 +73,14 @@ body #header .container .nav__right .list {
     left: 0;
     bottom: -15px;
   }
+<<<<<<< HEAD
   body #aside .menu-wrap {
     display: flex;
     height: 100%;
     align-items: center;
   }
+=======
+>>>>>>> 84ae64e151c2f4619beabf88ff7104ccb6132698
   body #aside .list {
     display: flex;
     flex-direction: row;

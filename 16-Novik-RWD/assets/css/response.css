@@ -47,7 +47,14 @@
     .novik-mobile {
         display: block;
     }
+<<<<<<< HEAD
     .burger {
+=======
+    .hamburger {
+        display: block;
+    }
+    .mobile__menu {
+>>>>>>> 84ae64e151c2f4619beabf88ff7104ccb6132698
         display: block;
     }
 }    

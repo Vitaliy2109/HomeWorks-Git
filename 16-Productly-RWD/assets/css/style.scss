@@ -46,13 +46,21 @@ ul li {
 
 /*===HEADER===*/
 
-header {
+#header {
     padding-top: 17px;
     padding-bottom: 17px;
     position: fixed;
     width: 100%;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, .7);
+    backdrop-filter: blur(4px);
     z-index: 100;
+    transition: all .8s ease;
+    &.mobile {
+      backdrop-filter: blur(10px);
+    background-color: darken($color: rgba(240, 244, 249,), $amount: 3);
+    box-shadow: 0 0 3px #4e5a66;
+    }
+
     .container {
         display: flex;
         justify-content: space-between;
@@ -135,7 +143,7 @@ header {
 
 /*===SECTION 1===*/
 main {
-    padding-top: 141px;
+    padding-top: 100px;
 }
 
 #section-1 {
@@ -185,8 +193,9 @@ main {
     margin-bottom: 28px;
 }
 
-#section-1 .container {
-    margin-bottom: 100px;
+#section-1 {
+    padding-top: 41px;
+    padding-bottom: 100px;
 }
 
 /*===SECTION 1===*/
@@ -347,4 +356,82 @@ input::-webkit-input-placeholder {
     font-weight: 400;
     font-family: Montserrat;
     margin-bottom: 25px;
+}
+
+
+/*======MOBILE MENU======*/
+
+#hamburger {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    right: 35px;
+    top: 20px;
+    padding: 0;
+   
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    width: 30px;
+    height: 2px;
+   background-color: #173A56;
+    
+}
+
+
+#mobile__navigation {
+    position: fixed;
+    width: 90%;
+    background-color: darken($color: rgba(240, 244, 249, .8), $amount: 3);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-518px);
+    padding: 50px 0px;
+    border-radius: 0 0 50% 50%;
+    transition: all .5s ease;
+    &.open {
+        transform: translateY(0px) translateX(-50%);
+    }
+    .mobile__links {
+        ul {
+            
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 0 30px;
+            margin-bottom: 50px;
+            li {
+                a {
+                    font-size: 24px;
+                    text-shadow: 1px 1px .4px #000000;
+                }
+            }
+        }
+    }
+    .mobile__buttons {
+        display: flex;
+        justify-content: center;
+
+    }
+}
+#mobile__shadow {
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+    position: fixed;
+    background: rgba(0, 0, 0, .7);
+    backdrop-filter: blur(7px);
+    transition: all .5s ease;
+    opacity: 0;
+    visibility: hidden;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
 }

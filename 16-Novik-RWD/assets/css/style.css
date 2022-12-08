@@ -122,12 +122,15 @@ h1 {
   display: none;
 }
 
+<<<<<<< HEAD
 .burger {
   position: fixed;
   width: 33px;
   height: 20px;
 }
 
+=======
+>>>>>>> 84ae64e151c2f4619beabf88ff7104ccb6132698
 /*===SECTION 1 PHOTO====*/
 /*===SECTION 2  ABOUT ME====*/
 #about .container {
@@ -327,15 +330,27 @@ h1 {
   vertical-align: top;
 }
 
+<<<<<<< HEAD
 .burger {
+=======
+.hamburger {
+  display: none;
+>>>>>>> 84ae64e151c2f4619beabf88ff7104ccb6132698
   position: fixed;
   right: 40px;
   top: 80px;
   z-index: 1001;
+<<<<<<< HEAD
   display: none;
 }
 
 .mobile__menu {
+=======
+}
+
+.mobile__menu {
+  display: none;
+>>>>>>> 84ae64e151c2f4619beabf88ff7104ccb6132698
   position: fixed;
   left: 0;
   top: 0;
@@ -351,6 +366,12 @@ h1 {
 .mobile__menu ul li {
   list-style-type: none;
 }
+<<<<<<< HEAD
+=======
+.mobile__menu .main_menu__mobile {
+  margin-left: 26px;
+}
+>>>>>>> 84ae64e151c2f4619beabf88ff7104ccb6132698
 .mobile__menu .main_menu__mobile li {
   margin-bottom: 68px;
 }

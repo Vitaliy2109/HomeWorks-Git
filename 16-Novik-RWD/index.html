@@ -8,12 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/hamburgers.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/response.css" />
   </head>
 
   <body>
     <div class="page-wrap">
+<<<<<<< HEAD
       <div class="burger" onclick="toggleMenu()">
         <img src="assets/images/burger.svg" alt="" />
       </div>
@@ -28,17 +30,39 @@
           </ul>
           <p class="lang">RU <span>| ENG</span></p>
           
+=======
+      <a id="home"></a>
+      <div
+        class="hamburger hamburger--arrowalt"
+        onclick="toggleMenu() "
+        id="hamburger"
+      >
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
+      </div>
+      <div class="mobile__menu" id="mobile__menu">
+        <nav class="main_menu__mobile">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-me">About me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+          </ul>
+          <p class="lang">RU <span>| ENG</span></p>
+>>>>>>> 84ae64e151c2f4619beabf88ff7104ccb6132698
         </nav>
       </div>
       <header id="header">
         <div class="container">
           <nav class="main_menu">
             <ul>
-              <li><a href="#" id="home">Home</a></li>
-              <li><a href="#">About me</a></li>
-              <li><a href="#">Skills</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Contacts</a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about-me">About me</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contacts">Contacts</a></li>
             </ul>
           </nav>
         </div>
@@ -71,6 +95,7 @@
                 alt=""
                 class="novik-mobile"
               />
+              <a id="about-me"></a>
             </div>
           </div>
         </section>
@@ -93,6 +118,7 @@
             </div>
           </div>
         </section>
+        <a id="skills"></a>
         <section id="skills">
           <div class="container">
             <div class="heading">
@@ -258,6 +284,7 @@
             </ul>
           </div>
         </section>
+        <a id="portfolio"></a>
         <section id="portfolio" class="back_col">
           <div class="container">
             <h2>Portfolio</h2>
@@ -289,6 +316,7 @@
         </section>
       </main>
       <footer id="footer">
+        <a id="contacts"></a>
         <div class="container">
           <div class="contacts">
             <h2>Contacts</h2>
@@ -323,6 +351,25 @@
     <script>
       function toggleMenu() {
         document.getElementById("mobile__menu").classList.toggle("open");
+<<<<<<< HEAD
+=======
+        document.getElementById("hamburger").classList.toggle("is-active");
+      }
+      /*======Цей скрипт знайшов в інтернеті, для плавного скролу на сторінці=======*/
+      const anchors = document.querySelectorAll('a[href*="#"]');
+
+      for (let anchor of anchors) {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const blockID = anchor.getAttribute("href").substr(1);
+
+          document.getElementById(blockID).scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        });
+>>>>>>> 84ae64e151c2f4619beabf88ff7104ccb6132698
       }
     </script>
   </body>

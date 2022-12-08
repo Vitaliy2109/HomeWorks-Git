@@ -4,22 +4,27 @@ body {
     overflow-x: hidden;
   }
 
-  nav {
+  .header nav {
     display: none;
+  }
+
+  .header {
+    padding: 20px;
   }
 
   .nav__search {
     margin-right: 40px;
-  }
-
-  .header .nav__burger {
-    display: inline-block;
+    position: absolute;
+    right: 70px;
   }
 
   .container {
     max-width: 700px !important;
   }
 
+  .section-1 {
+    padding-top: 59px;
+  }
   .section-1 .section-wrap {
     height: 320px !important;
   }
@@ -69,6 +74,33 @@ body {
   .footer .container .footer__info .info-left {
     text-align: center;
     margin-bottom: 52px;
+  }
+
+  .hamburger {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 540px) {
+  .mobile_navigation.navigation,
+.mobile_navigation.navigation.open {
+    width: 270px;
+  }
+  .mobile_navigation.navigation .nav__list,
+.mobile_navigation.navigation.open .nav__list {
+    margin-left: 40px;
+  }
+  .mobile_navigation.navigation .nav__list .logo,
+.mobile_navigation.navigation.open .nav__list .logo {
+    width: 170px;
+  }
+  .mobile_navigation.navigation .nav__list .nav__link a,
+.mobile_navigation.navigation.open .nav__list .nav__link a {
+    font-size: 28px;
+  }
+
+  #hamburger-bg.open {
+    width: 90px;
+    height: 70px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -156,5 +188,37 @@ body {
   .footer .footer-subinfo .text {
     font-size: 16px;
     letter-spacing: 0.1em;
+  }
+
+  .mobile_navigation.navigation,
+.mobile_navigation.navigation.open {
+    width: 270px;
+  }
+  .mobile_navigation.navigation .nav__list .logo,
+.mobile_navigation.navigation.open .nav__list .logo {
+    width: 170px;
+  }
+  .mobile_navigation.navigation .nav__list .nav__link a,
+.mobile_navigation.navigation.open .nav__list .nav__link a {
+    font-size: 28px;
+  }
+
+  #hamburger-bg.open {
+    width: 90px;
+    height: 70px;
+  }
+}
+@media screen and (max-width: 368px) {
+  .mobile_navigation.navigation,
+.mobile_navigation.navigation.open {
+    width: 210px;
+  }
+  .mobile_navigation.navigation .nav__list .logo,
+.mobile_navigation.navigation.open .nav__list .logo {
+    width: 130px;
+  }
+  .mobile_navigation.navigation .nav__list .nav__link a,
+.mobile_navigation.navigation.open .nav__list .nav__link a {
+    font-size: 22px;
   }
 }

@@ -76,8 +76,7 @@ img {
   .nav__list {
     display: flex;
     gap: 42px;
-    -webkit-gap: 42px;
-    margin-right: 84px;
+    margin-right: 48px;
 
     .nav__link {
 
@@ -136,13 +135,14 @@ img {
   .nav__search {
     cursor: pointer;
     display: flex;
+    width: 25px;
+    height: 25px;
+   
   }
 }
 
-.nav__burger {
-  display: none;
-  cursor: pointer;
-}
+
+
 
 
 /*====HEADER=====*/
@@ -491,7 +491,7 @@ h3 {
 
     .links__item {
       margin-right: 23px;
-     
+
 
       &:last-child {
         margin-right: 0px;
@@ -510,11 +510,12 @@ h3 {
         &:hover {
           background-color: #565656;
         }
-         &:hover i::before {
-           color: #ffffff;
-           transform: scale(1.09);
-         }
-      
+
+        &:hover i::before {
+          color: #ffffff;
+          transform: scale(1.09);
+        }
+
         i {
           font-size: 24px;
 
@@ -566,4 +567,97 @@ h3 {
 
 /*====ARROW=====*/
 
-/*================================СДЕЛАТЬ ФИКСИРОВАННЫЙ ХЕДЕР==================*/
+
+/*=====MOBILE MENU======*/
+.hamburger {
+  padding: 0;
+  display: none;
+  z-index: 1000;
+  position: fixed;
+  right: 34px;
+  top: 20px;
+  z-index: 1000;
+}
+
+#mobile-menu-wrap {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  backdrop-filter: blur(6px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 998;
+  visibility: hidden;
+  transition: all .5s ease;
+  opacity: 0;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+
+    &:checked {}
+  }
+}
+
+#hamburger-bg {
+  width: 120px;
+  height: 100px;
+  position: fixed;
+  background-color: #ffff;
+  right: 0;
+  border-radius: 0 0 0 50%;
+  transform: translateX(120px) translateY(-120px);
+  -webkit-transform: translateX(120px) translateY(-120px);
+  transition: all .5s ease;
+  z-index: 999;
+
+  &.open {
+    transform: translate(0);
+    -webkit-transform: translate(0);
+  }
+}
+
+.mobile_navigation {
+  position: fixed;
+  z-index: 999;
+  width: 380px;
+  height: 90vh;
+  background-color: #ffffff;
+  top: 30px;
+  overflow-y: auto;
+  border-radius: 0 70px 70px 0;
+  transform: translateX(-380px) scale(0.7);
+  -webkit-transform: translateX(-380px) scale(0.7);
+  transition: all .5s ease;
+
+  &.open {
+    transform: translateX(0) scale(1);
+    -webkit-transform: translateX(0) scale(1);
+  }
+
+  &.navigation {
+    .nav__link {
+      a {
+        font-size: 30px;
+
+      }
+    }
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    margin-left: 60px;
+    padding-top: 60px;
+    margin-right: 0px;
+    .last {
+      padding-bottom: 90px;
+    }
+    .logo {
+      width: 250px;
+      height: 30px;
+    }
+  }
+}
