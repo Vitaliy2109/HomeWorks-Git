@@ -6,15 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solis</title>
     <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/icons.css" />
+    <link rel="stylesheet" href="assets/css/hamburgers.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.csss"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="assets/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="assets/css/style.min.css" />
+    <link rel="stylesheet" href="assets/css/response.min.css" />
   </head>
   <body>
+    <div id="mobile__shadow" onclick="toggleMenu()"></div>
     <header class="header" id="header">
       <div class="container">
         <div class="logo-wrap">
-          <a href="#"><img src="assets/images/header/logo.svg" alt="" /></a>
+          <a href="#"
+            ><img
+              data-src="assets/images/header/logo.svg"
+              alt="logo"
+              class="lazy"
+          /></a>
         </div>
-        <nav>
+        <nav id="navigation">
+          <ul class="list mobile">
+            <li class="list__item"><a href="#">Home</a></li>
+            <li class="list__item"><a href="#">About</a></li>
+            <li class="list__item"><a href="#">Products</a></li>
+            <li class="list__item"><a href="#">Use Cases</a></li>
+            <li class="list__item"><a href="#">Pricing</a></li>
+            <li class="list__item"><a href="#">Resources</a></li>
+          </ul>
+        </nav>
+        <div
+          class="hamburger hamburger--squeeze"
+          id="hamburger"
+          onclick="toggleMenu() "
+        >
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
+        <nav id="navigation-mobile">
           <ul class="list">
             <li class="list__item"><a href="#">Home</a></li>
             <li class="list__item"><a href="#">About</a></li>
@@ -29,21 +86,31 @@
     <main>
       <div class="container">
         <section class="section-1">
-          <h1 class="title playfair-400">
+          <h1 class="title playfair-400 animate__animated animate__fadeInDown">
             A peer-to-peer stablecoin
             <span class="italic">clearinghouse</span> for the new economy
           </h1>
-          <p class="lato-300">
+          <p class="lato-300 animate__animated animate__fadeInUp">
             We are bringing real solutions to the payments world by leveraging
             public blockchains.
           </p>
-          <button type="button" class="btn">Join now</button>
+          <button
+            type="button"
+            class="btn animate__animated animate__fadeInUp wow"
+            data-wow-delay="0.6s"
+          >
+            Join now
+          </button>
         </section>
         <section class="section-2">
-          <div class="background">
-            <img src="assets/images/section-2/background.jpg" alt="" />
+          <div class="background animate__animated animate__fadeInLeft">
+            <img
+              data-src="assets/images/section-2/background.jpg"
+              alt="background"
+              class="lazy"
+            />
           </div>
-          <div class="info">
+          <div class="info animate__animated animate__fadeInRight">
             <ul class="list">
               <li class="list__item">
                 <h2 class="playfair-400">
@@ -63,25 +130,27 @@
               </li>
             </ul>
             <div class="text-info">
-              <p class="lato-300">
+              <p class="lato-300 top">
                 Solis group is a new venture created with investments from and
                 collaboration with XBTO International, XBTO Ventures and Phil
                 Potter, formerly of bitfinex. Stablehouse is intended to launch
                 a first-of-its-kind clearing house for stablecoins that seeks to
-                promote the next phase of the market’s development. <br />
-                <br />
+                promote the next phase of the market’s development.
+              </p>
+              <p class="lato-300 bottom">
                 The API-enabled, centralized platform addresses the key issues
                 of inconsistent liquidity, stability and accessibility which are
                 currently preventing the stablecoin market from reaching
                 critical mass.
               </p>
+
               <button type="button" class="btn">Contact sales</button>
             </div>
           </div>
         </section>
         <section class="section-3">
           <ul class="list">
-            <li class="list__item">
+            <li class="list__item animate__animated animate__fadeInLeft wow">
               <h3 class="playfair-400 title">
                 Qualified <span class="italic">traders </span>and liquidty
                 <span class="italic">solutions</span>
@@ -91,7 +160,7 @@
                 USDT, TrueUSD, Dai, Eurs and Gemini Dollar.
               </p>
             </li>
-            <li class="list__item">
+            <li class="list__item animate__animated animate__fadeInLeft wow">
               <h3 class="playfair-400 title">
                 Settlement/OTC API and
                 <span class="italic">integration</span>
@@ -102,7 +171,7 @@
                 API.
               </p>
             </li>
-            <li class="list__item">
+            <li class="list__item animate__animated animate__fadeInLeft wow">
               <h3 class="playfair-400 title">
                 The best
                 <span class="italic"
@@ -116,7 +185,7 @@
                 Stablehouse is for you.
               </p>
             </li>
-            <li class="list__item">
+            <li class="list__item animate__animated animate__fadeInLeft wow">
               <h3 class="playfair-400 title">
                 <span class="italic">Treasury </span>and
                 <span class="italic">returns</span> <br />
@@ -130,17 +199,17 @@
           </ul>
         </section>
         <section class="section-4">
-          <div class="info">
+          <div class="info animate__animated animate__fadeInDown wow">
             <div class="hooks">
               <img
-                src="assets/images/section-4/hooks-white-theme.svg"
-                alt=""
-                class="hooks-white"
+                data-src="assets/images/section-4/hooks-white-theme.svg"
+                alt="hook"
+                class="hooks-white lazy"
               />
               <img
-                src="assets/images/section-4/hooks-dark-theme.svg"
-                class="hooks-dark"
-                alt=""
+                data-src="assets/images/section-4/hooks-dark-theme.svg"
+                class="hooks-dark lazy"
+                alt="hook"
               />
             </div>
             <h4 class="lato-400">
@@ -154,13 +223,14 @@
           <div class="wrapper">
             <div class="video-wrap">
               <video
-                class="video"
-                src="assets/images/section-5/video.mp4"
+                class="video lazy"
+                data-src="assets/images/section-5/video.mp4"
                 controls
+                poster="assets/images/section-5/poster.svg"
               ></video>
             </div>
           </div>
-          <div class="info">
+          <div class="info animate__animated animate__fadeInDown wow">
             <h5 class="playfair-400 title">
               A <span class="italic">powerful API</span> , easy to use user
               interface
@@ -173,10 +243,14 @@
           </div>
         </section>
         <section class="section-6">
-          <div class="background">
-            <img src="assets/images/section-6/background.jpg" alt="" />
+          <div class="background animate__animated animate__fadeInLeft wow">
+            <img
+              data-src="assets/images/section-6/background.jpg"
+              alt="background"
+              class="lazy"
+            />
           </div>
-          <div class="info">
+          <div class="info animate__animated animate__fadeInRight wow">
             <ul class="list">
               <li class="list__item">
                 <h5 class="playfair-400 title">On-Exchange Trading</h5>
@@ -193,7 +267,7 @@
                 </p>
               </li>
               <li class="list__item">
-                <h5 class="playfair-400 title">Time Settlement Swaps</h5>
+                <h5 class="playfair-400 title mb">Time Settlement Swaps</h5>
                 <p class="lato-300">
                   LBTC / Lightning and other sidechain swaps
                 </p>
@@ -205,7 +279,7 @@
           </div>
         </section>
         <section class="section-7">
-          <div class="info">
+          <div class="info animate__animated animate__fadeInDown wow">
             <h5 class="playfair-400 title">
               Client <span class="italic">reciews</span>
             </h5>
@@ -215,11 +289,11 @@
             </p>
           </div>
           <ul class="list">
-            <li class="list__item">
+            <li class="list__item animate__animated animate__fadeInLeft wow">
               <img
-                src="assets/images/section-7/bg-1.jpg"
-                alt=""
-                class="background"
+                data-src="assets/images/section-7/bg-1.jpg"
+                alt="background"
+                class="background lazy"
               />
               <p class="lato-400">
                 Solis did a great job. Whether providing direct development
@@ -231,11 +305,14 @@
               </p>
               <h6 class="playfair-400">Dr. Jamika Burge</h6>
             </li>
-            <li class="list__item">
+            <li
+              class="list__item animate__animated animate__fadeInLeft wow"
+              data-wow-delay="0.5s"
+            >
               <img
-                src="assets/images/section-7/bg-2.jpg"
-                alt=""
-                class="background"
+                data-src="assets/images/section-7/bg-2.jpg"
+                alt="background"
+                class="background lazy"
               />
               <p class="lato-400">
                 Solis is a cutting edge company and knows the importance of
@@ -246,11 +323,14 @@
               </p>
               <h6 class="playfair-400">Evie-Rose Prosse</h6>
             </li>
-            <li class="list__item">
+            <li
+              class="list__item animate__animated animate__fadeInLeft wow"
+              data-wow-delay="1s"
+            >
               <img
-                src="assets/images/section-7/bg-3.jpg"
-                alt=""
-                class="background"
+                data-src="assets/images/section-7/bg-3.jpg"
+                alt="background"
+                class="background lazy"
               />
               <p class="lato-400">
                 I can’t say enough about how knowledgeable Toinette Rorie is in
@@ -269,11 +349,11 @@
               Contact <span class="italic">our sales team</span>
             </h5>
             <p class="lato-300">
-              Our team is happy to answer your sales questions. Fill out the
-              form and we’ll be in touch as soon as possible.
+              Our team is happy to answer your sales questions. <br />
+              Fill out the form and we’ll be in touch as soon as possible.
             </p>
           </div>
-          <form action="" method="post" class="form">
+          <form action="#" method="post" class="form">
             <div class="input-wrap">
               <input type="text" required id="name" />
               <label for="name">Your name</label>
@@ -294,6 +374,38 @@
         </section>
       </div>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <p class="lato-300">&#169; 2020 Solisgroup. All Rights Reserved.</p>
+        <p class="lato-400">
+          <span class="lato-300">made by </span>Zgraya.digital
+        </p>
+        <div class="links">
+          <a href="#" class="lato-400">User Agreement</a>
+          <a href="#" class="lato-400"> Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="theme-button-wrap">
+      <input type="checkbox" class="checkbox" id="checkbox" />
+      <label for="checkbox"
+        ><i class="icon-sun"></i> <i class="icon-moon"></i
+      ></label>
+    </div>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/lazyload.min.js"></script>
+    <script src="assets/js/wow.min.jss"></script>
+    <script>
+      var lazyLoadInstance = new LazyLoad({
+        // Your custom settings go here
+      });
+    </script>
+    <script>
+      const wow = new WOW({
+        animateClass: "animate__animated",
+      });
+      wow.init();
+    </script>
   </body>
 </html>
