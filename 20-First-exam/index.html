@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solis</title>
-    <link rel="stylesheet" href="assets/css/fonts.css" />
-    <link rel="stylesheet" href="assets/css/icons.css" />
-    <link rel="stylesheet" href="assets/css/hamburgers.min.css" />
+    <meta name="description" content="Solis | Перший екзамен" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -37,6 +35,22 @@
     />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
+    <meta
+      property="og:url"
+      content="https://vitaliy2109.github.io/HomeWorks-Git/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Solis" />
+    <meta property="og:description" content="Solis | Перший екзамен" />
+    <meta property="og:image" content="assets/images/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:title" content="Solis" />
+    <meta name="twitter:description" content="Solis | Перший екзамен" />
+    <meta name="twitter:image" content="assets/images/og-image.jpg" />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/icons.css" />
+    <link rel="stylesheet" href="assets/css/hamburgers.min.css" />
     <link rel="stylesheet" href="assets/css/style.min.css" />
     <link rel="stylesheet" href="assets/css/response.min.css" />
   </head>
@@ -53,13 +67,17 @@
           /></a>
         </div>
         <nav id="navigation">
-          <ul class="list mobile">
-            <li class="list__item"><a href="#">Home</a></li>
-            <li class="list__item"><a href="#">About</a></li>
-            <li class="list__item"><a href="#">Products</a></li>
-            <li class="list__item"><a href="#">Use Cases</a></li>
-            <li class="list__item"><a href="#">Pricing</a></li>
-            <li class="list__item"><a href="#">Resources</a></li>
+          <ul
+            itemscope
+            itemtype="http://schema.org/SiteNavigationElement"
+            class="list mobile"
+          >
+            <li class="list__item"><a itemprop="url" href="#">Home</a></li>
+            <li class="list__item"><a itemprop="url" href="#">About</a></li>
+            <li class="list__item"><a itemprop="url" href="#">Products</a></li>
+            <li class="list__item"><a itemprop="url" href="#">Use Cases</a></li>
+            <li class="list__item"><a itemprop="url" href="#">Pricing</a></li>
+            <li class="list__item"><a itemprop="url" href="#">Resources</a></li>
           </ul>
         </nav>
         <div
@@ -72,13 +90,17 @@
           </div>
         </div>
         <nav id="navigation-mobile">
-          <ul class="list">
-            <li class="list__item"><a href="#">Home</a></li>
-            <li class="list__item"><a href="#">About</a></li>
-            <li class="list__item"><a href="#">Products</a></li>
-            <li class="list__item"><a href="#">Use Cases</a></li>
-            <li class="list__item"><a href="#">Pricing</a></li>
-            <li class="list__item"><a href="#">Resources</a></li>
+          <ul
+            itemscope
+            itemtype="http://schema.org/SiteNavigationElement"
+            class="list"
+          >
+            <li class="list__item"><a itemprop="url" href="#">Home</a></li>
+            <li class="list__item"><a itemprop="url" href="#">About</a></li>
+            <li class="list__item"><a itemprop="url" href="#">Products</a></li>
+            <li class="list__item"><a itemprop="url" href="#">Use Cases</a></li>
+            <li class="list__item"><a itemprop="url" href="#">Pricing</a></li>
+            <li class="list__item"><a itemprop="url" href="#">Resources</a></li>
           </ul>
         </nav>
       </div>
@@ -374,9 +396,13 @@
         <p class="lato-400">
           <span class="lato-300">made by </span>Zgraya.digital
         </p>
-        <div class="links">
-          <a href="#" class="lato-400">User Agreement</a>
-          <a href="#" class="lato-400"> Privacy Policy</a>
+        <div
+          class="links"
+          itemscope
+          itemtype="http://schema.org/SiteNavigationElement"
+        >
+          <a href="#" itemprop="url" class="lato-400">User Agreement</a>
+          <a href="#" itemprop="url" class="lato-400"> Privacy Policy</a>
         </div>
       </div>
     </footer>

@@ -1,0 +1,6 @@
+User agent: *
+
+Disallow: /admin/
+
+Sitemap: https://vitaliy2109.github.io/HomeWorks-Git/20-First-exam/sitemap.xml
+Host: localhost
