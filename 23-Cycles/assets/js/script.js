@@ -159,3 +159,25 @@ function taskEight() {
     `Ви ввели ${plusses} додатніх чисел, ${minuses} від'ємних чисел, і ${zero} нулів`
   );
 }
+
+function taskNine() {
+  let i = 0;
+  let quest;
+  const days = [
+    "Понеділок",
+    "Вівторок",
+    "Середа",
+    "Четвер",
+    "П'ятниця",
+    "Субота",
+    "Неділя",
+  ];
+
+  while (quest !== false) {
+    quest = confirm(days[i] + ". Бажаєте побачити наступний день?");
+    i++;
+    if (i >= 7) {
+      i = 0;
+    }
+  }
+}

@@ -172,3 +172,18 @@ function taskEight() {
 
   alert("\u0412\u0438 \u0432\u0432\u0435\u043B\u0438 ".concat(plusses, " \u0434\u043E\u0434\u0430\u0442\u043D\u0456\u0445 \u0447\u0438\u0441\u0435\u043B, ").concat(minuses, " \u0432\u0456\u0434'\u0454\u043C\u043D\u0438\u0445 \u0447\u0438\u0441\u0435\u043B, \u0456 ").concat(zero, " \u043D\u0443\u043B\u0456\u0432"));
 }
+
+function taskNine() {
+  var i = 0;
+  var quest;
+  var days = ["Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота", "Неділя"];
+
+  while (quest !== false) {
+    quest = confirm(days[i] + ". Бажаєте побачити наступний день?");
+    i++;
+
+    if (i >= 7) {
+      i = 0;
+    }
+  }
+}
