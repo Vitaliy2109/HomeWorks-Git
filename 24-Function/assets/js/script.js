@@ -14,6 +14,8 @@ function taskThree() {
       num1,
       num2
     );
+  } else {
+    document.getElementById("comapeResult").innerHTML = "Введіть число!";
   }
 }
 
@@ -27,7 +29,7 @@ function taskFour() {
   if (!isNaN(num) && num <= 15) {
     output.innerHTML = factorial(num);
   } else {
-    output.innerHTML = "";
+    output.innerHTML = "Введіть число!";
   }
 }
 
@@ -39,7 +41,11 @@ function taskFive() {
   const num1 = document.getElementById("uniteNum1").value;
   const num2 = document.getElementById("uniteNum2").value;
   const num3 = document.getElementById("uniteNum3").value;
-  document.getElementById("uniteResult").innerHTML = unite(num1, num2, num3);
+  if (!isNaN(num1) && !isNaN(num2) && !isNaN(num3)) {
+    document.getElementById("uniteResult").innerHTML = unite(num1, num2, num3);
+  } else {
+    document.getElementById("uniteResult").innerHTML = "Введіть число!";
+  }
 }
 
 function calcArea(a, b) {
@@ -57,6 +63,8 @@ function taskSix() {
   const num2 = document.getElementById("areaNum2").value;
   if (!isNaN(num1) && !isNaN(num2)) {
     document.getElementById("calcAreaResult").innerHTML = calcArea(num1, num2);
+  } else {
+    document.getElementById("calcAreaResult").innerHTML = "Введіть число!";
   }
 }
 
@@ -90,13 +98,16 @@ function range(start, end) {
     }
   }
 }
+range(1, 1000);
 
 function taskEight() {
   const min = document.getElementById("minRange").value;
   const max = document.getElementById("maxRange").value;
   if (!isNaN(min) && !isNaN(max)) {
     let res = range(min, max);
-    document.getElementById("perfectNumList").innerHTML = console.log(res);
+    document.getElementById("perfectNumList").innerHTML = res;
+  } else {
+    document.getElementById("perfectNumList").innerHTML = "Введіть число!";
   }
 }
 

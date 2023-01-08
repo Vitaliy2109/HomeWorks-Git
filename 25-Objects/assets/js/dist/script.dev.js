@@ -70,18 +70,17 @@ var car = {
 
       var hour = Math.trunc(totalTime);
       distase < 10 ? hour = 0 : hour;
+      var minutes = Math.trunc(totalTime % 1 * 60);
 
-      var _minutes = Math.trunc(totalTime % 1 * 60);
-
-      if (_minutes < 10) {
-        _minutes = "0" + _minutes;
+      if (minutes < 10) {
+        minutes = "0" + minutes;
       }
 
       if (hour < 10) {
         hour = "0" + hour;
       }
 
-      var result = hour + ":" + _minutes;
+      var result = hour + ":" + minutes;
       document.getElementById("time").innerHTML = result;
     }
 
@@ -98,33 +97,28 @@ var time = {
   show: function show() {
     document.getElementById("resultTime").innerHTML = "".concat(this.hours, " : ").concat(this.minutes, " : ").concat(this.seconds);
   },
-  addSec: function addSec() {
-    var input = document.getElementById("addSec");
-    var value = parseInt(input.value);
-    minutes = Math.floor(value / 60); //4000 / 60 == 66,6666666
-
-    hours = Math.floor(minutes / 60); //66 / 60 = 1
-
-    this.hours = hours % 24; // 1 % 24 === 1
-
-    this.minutes = minutes % 60; // 66 % 60 === 6
-
-    this.seconds = value % 60; // 4000 % 60 === 40
-
-    this.show();
+  timeToSec: function timeToSec(h, m, s) {
+    var res = h * 3600 + m * 60 + s;
+    console.log(res);
   },
-  addMin: function addMin() {
-    var input = document.getElementById("addMin");
-    var value = parseInt(input.value);
-    minutes = Math.floor(value); //85
+  secTotime: function secTotime(n) {
+    var a = (n / 3600).toFixed(2); //Math.trunc
 
-    hours = Math.floor(minutes / 60); //85 / 60 = 1.....
+    var b = a % 1 * 60; //Math.trunc
 
-    hours = hours % 24; // 1 % 24 === 1
-
-    minutes = minutes % 60; // 85 % 60 === 25
-
-    seconds = 0;
-    console.log("".concat(hours, " : ").concat(minutes, " : ").concat(seconds));
+    var seconds = n % 60;
+    var hours = Math.trunc(a);
+    var minutes = Math.trunc(b);
+    console.log(hours, minutes, seconds);
+  },
+  addSeconds: function addSeconds(a, b) {
+    var defaultTime = this.timeToSec(this.hours, this.minutes, this.seconds);
+    var userTime = document.getElementById("addSec").value;
+    return defaultTime + userTime;
   }
 };
+time.addSeconds(); // 2 метода === time to sec && sec to time
+// Перевести стартовое время в секунды === hours * 3600; min * 60 + sec
+// добавить нужное количество секунд
+// обратная функция math.trunc(x / 3600) == часы; math.trunc(остаток от часов /60) == ЦЕЛАЯ ЧАСТЬ числа == минуты; остаток == секунды
+// S / 3600

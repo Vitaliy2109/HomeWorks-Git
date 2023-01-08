@@ -159,7 +159,7 @@
               </h2>
               <div
                 id="collapseTwo"
-                class="accordion-collapse collapse show"
+                class="accordion-collapse collapse"
                 aria-labelledby="headingTwo"
                 data-bs-parent="#accordionExample"
               >
@@ -172,11 +172,16 @@
                   <output id="resultTime"></output>
                 </div>
                 <div class="input-wrap">
-                  <span class="badge bg-secondary">Seconds!</span>
-                  <input type="number" id="addSec" oninput="time.addSec()" />
+                  <span class="badge bg-secondary">Seconds</span>
+                  <input type="number" min="0" id="addSec" />
+                  <button onclick="time.addSeconds(), time.show()">
+                    Add Seconds
+                  </button>
                   <span class="badge bg-secondary">Minutes</span>
-                  <input type="number" id="addMin" oninput="time.addMin()" />
-                  <button onclick="time.show()">Submit</button>
+                  <input type="number" min="0" id="addMin" />
+                  <button onclick="time.addMinutes(), time.show()">
+                    Add Minutes
+                  </button>
                 </div>
               </div>
             </div>

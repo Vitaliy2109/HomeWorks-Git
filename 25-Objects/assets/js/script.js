@@ -80,36 +80,48 @@ const car = {
   },
 };
 
+function addZero(n) {
+  if (n >= 0 && n <= 9) {
+    return "0" + n;
+  }
+  return n;
+}
+
+const date = new Date();
+
 const time = {
-  hours: 22, //* 3600
-  minutes: 33, // * 60 + sec
-  seconds: 44,
+  hours: date.getHours(),
+  minutes: date.getMinutes(),
+  seconds: date.getSeconds(),
 
   show: function () {
-    document.getElementById(
-      "resultTime"
-    ).innerHTML = `${this.hours} : ${this.minutes} : ${this.seconds}`;
+    document.getElementById("resultTime").innerHTML = `${addZero(
+      this.hours
+    )} : ${addZero(this.minutes)} : ${addZero(this.seconds)}`;
   },
 
-  addSec: function () {
-    const input = document.getElementById("addSec");
-    const value = parseInt(input.value);
-    minutes = Math.floor(value / 60); //4000 / 60 == 66,6666666
-    hours = Math.floor(minutes / 60); //66 / 60 = 1
-    this.hours = hours % 24; // 1 % 24 === 1
-    this.minutes = minutes % 60; // 66 % 60 === 6
-    this.seconds = value % 60; // 4000 % 60 === 40
-
-    this.show();
+  timeToSec: function (h, m, s) {
+    let res = h * 3600 + m * 60 + s;
+    return res;
   },
-  addMin: function () {
-    const input = document.getElementById("addMin");
-    const value = parseInt(input.value);
-    minutes = Math.floor(value); //85
-    hours = Math.floor(minutes / 60); //85 / 60 = 1.....
-    hours = hours % 24; // 1 % 24 === 1
-    minutes = minutes % 60; // 85 % 60 === 25
-    seconds = 0;
-    console.log(`${hours} : ${minutes} : ${seconds}`);
+  secTotime: function (n) {
+    let a = n / 3600;
+    let b = n - Math.trunc(a) * 3600;
+    this.hours = Math.trunc(a) % 24;
+    this.minutes = Math.trunc(Math.trunc(b) / 60);
+    this.seconds = Math.trunc(b) - this.minutes * 60;
+  },
+  addSeconds: function () {
+    let defaultTime = this.timeToSec(this.hours, this.minutes, this.seconds);
+    let userSec = +document.getElementById("addSec").value;
+    let res = defaultTime + userSec;
+    this.secTotime(res);
+  },
+
+  addMinutes: function () {
+    let defaultTime = this.timeToSec(this.hours, this.minutes, this.seconds);
+    let userMin = document.getElementById("addMin").value;
+    let res = userMin * 60 + defaultTime;
+    this.secTotime(res);
   },
 };
