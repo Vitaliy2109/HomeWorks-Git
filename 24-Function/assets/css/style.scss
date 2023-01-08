@@ -23,7 +23,7 @@ body {
 a,
 button {
   cursor: pointer;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 img {
@@ -41,4 +41,7 @@ ol {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+}
+output {
+  font-size: 28px;
 }

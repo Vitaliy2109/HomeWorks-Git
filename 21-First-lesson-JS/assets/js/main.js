@@ -7,9 +7,8 @@ function userName() {
   }
 }
 
-const currentYear = 2022;
-
 function userAge() {
+  const currentYear = 2022;
   const age = parseInt(prompt("Введіть дату вашого народження"));
   if (!isNaN(age)) {
     let result = currentYear - age;
@@ -33,9 +32,9 @@ function calc() {
 
 function calcRadius() {
   const radius = prompt("Введіть радіус кола");
-  const pi = 3.14;
+
   if (!isNaN(radius) && radius !== null && radius !== "") {
-    let result = pi * (radius * radius);
+    let result = Math.PI * (radius * radius);
     alert(`Площа окружності дорівнює ${result}!`);
   } else {
     alert("Вам потрібно ввести число!");
@@ -69,5 +68,3 @@ function convert() {
     alert("Ви ввели неправильне значення.");
   }
 }
-
-

@@ -10,9 +10,8 @@ function userName() {
   }
 }
 
-var currentYear = 2022;
-
 function userAge() {
+  var currentYear = 2022;
   var age = parseInt(prompt("Введіть дату вашого народження"));
 
   if (!isNaN(age)) {
@@ -36,10 +35,9 @@ function calc() {
 
 function calcRadius() {
   var radius = prompt("Введіть радіус кола");
-  var pi = 3.14;
 
   if (!isNaN(radius) && radius !== null && radius !== "") {
-    var result = pi * (radius * radius);
+    var result = Math.PI * (radius * radius);
     alert("\u041F\u043B\u043E\u0449\u0430 \u043E\u043A\u0440\u0443\u0436\u043D\u043E\u0441\u0442\u0456 \u0434\u043E\u0440\u0456\u0432\u043D\u044E\u0454 ".concat(result, "!"));
   } else {
     alert("Вам потрібно ввести число!");
