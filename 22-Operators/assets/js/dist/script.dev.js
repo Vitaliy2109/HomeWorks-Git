@@ -14,7 +14,8 @@ function taskOne() {
 function taskTwo() {
   var a = "1";
   var b = 2;
-  alert(parseInt(a) + b);
+  var res = parseInt(a) + b;
+  alert(res);
 } // task --3
 
 
@@ -41,7 +42,7 @@ function taskFour() {
     if (!isNaN(price) && price !== null && price !== "") {
       var amount = sum / price;
       var change = sum - Math.floor(amount) * price;
-      alert("\u0417\u0430 ".concat(sum, " \u0433\u0440\u043D \u043F\u0440\u0438 \u0446\u0456\u043D\u0456 ").concat(price, " \u0437\u0430 \u043E\u0434\u043D\u0443 \u0448\u043E\u043A\u043E\u043B\u0430\u0434\u043A\u0443, \u0432\u0438 \u0437\u043C\u043E\u0436\u0435\u0442\u0435 \u043A\u0443\u043F\u0438\u0442\u0438 ").concat(Math.floor(amount), " \u0448\u043E\u043A\u043E\u043B\u0430\u0434\u043E\u043A, \u0442\u0430 \u0432 \u0432\u0430\u0441 \u0437\u0430\u043B\u0438\u0448\u0438\u0442\u044C\u0441\u044F ").concat(change.toFixed(2), " \u0433\u0440\u043D"));
+      alert("\u0417\u0430 ".concat(sum, " \u0433\u0440\u043D \u043F\u0440\u0438 \u0446\u0456\u043D\u0456 ").concat(price, " \u0437\u0430 \u043E\u0434\u043D\u0443 \u0448\u043E\u043A\u043E\u043B\u0430\u0434\u043A\u0443, \u0432\u0438 \u0437\u043C\u043E\u0436\u0435\u0442\u0435 \u043A\u0443\u043F\u0438\u0442\u0438 ").concat(amount, "\n         \u0448\u043E\u043A\u043E\u043B\u0430\u0434\u043E\u043A, \u0442\u0430 \u0432 \u0432\u0430\u0441 \u0437\u0430\u043B\u0438\u0448\u0438\u0442\u044C\u0441\u044F ").concat(change.toFixed(2), " \u0433\u0440\u043D"));
     } else {
       alert("Вам потрібео ввести число!");
     }

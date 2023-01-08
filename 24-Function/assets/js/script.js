@@ -1,79 +1,103 @@
-function taskOne() {
-  console.log(taskOne.length);
+function taskTwo() {
+  return arguments;
 }
 
-function taskTwo() {
-  const num1 = prompt("Перше число");
-  const num2 = prompt("Друге число");
-  if (!isNaN(num1) && !isNaN(num2)) {
-    num1 < num2
-      ? alert(-1)
-      : num1 > num2
-      ? alert(1)
-      : num1 == num2
-      ? alert(0)
-      : alert("");
-  }
+function compareNumbers(a, b) {
+  return a < b ? -1 : a > b ? 1 : a == b ? 0 : "";
 }
 
 function taskThree() {
-  function factorial(n) {
-    if (n == 1) return 1;
-    else return n * factorial(n - 1);
+  const num1 = document.getElementById("compareNum1").value;
+  const num2 = document.getElementById("compareNum2").value;
+  if (!isNaN(num1) && !isNaN(num2)) {
+    document.getElementById("comapeResult").innerHTML = compareNumbers(
+      num1,
+      num2
+    );
   }
-  const userNum = +prompt("Введіть число");
-  alert(factorial(userNum));
+}
+
+function factorial(n) {
+  return n != 1 ? n * factorial(n - 1) : 1;
 }
 
 function taskFour() {
-  const num = prompt("Введіть число");
-  const num2 = prompt("Введіть число");
-  const num3 = prompt("Введіть число");
-  if (!isNaN(num) && !isNaN(num2) && !isNaN(num3)) {
-    let res = String(num + num2 + num3);
-    alert(res);
+  const num = document.getElementById("factorialInput").value;
+  const output = document.getElementById("factorialResult");
+  if (!isNaN(num) && num <= 15) {
+    output.innerHTML = factorial(num);
+  } else {
+    output.innerHTML = "";
   }
+}
+
+function unite(n1, n2, n3) {
+  return String(n1 + n2 + n3);
 }
 
 function taskFive() {
-  const a = +prompt("1");
-  const b = +prompt("2");
-  let res;
-  if (!isNaN(a) && !isNaN(b) && a !== 0 && b !== 0) {
-    res = a * b;
-    alert(res);
-  } else if (a <= 0) {
-    res = b * b;
-    alert(res);
-  } else if (b <= 0) {
-    res = a * a;
-    alert(res);
-  } else {
-    alert("Вам потрібно ввести число");
+  const num1 = document.getElementById("uniteNum1").value;
+  const num2 = document.getElementById("uniteNum2").value;
+  const num3 = document.getElementById("uniteNum3").value;
+  document.getElementById("uniteResult").innerHTML = unite(num1, num2, num3);
+}
+
+function calcArea(a, b) {
+  if (a >= 1 && b >= 1) {
+    return a * b;
+  } else if (a < 1) {
+    return b * b;
+  } else if (b < 1) {
+    return a * a;
   }
 }
 
-// function taskSix(n) {
-//   let sum = 0;
-//   for (let i = 0; i < n; i++) {
-//     if (n % 1 === 0) {
-//       sum += i;
-//     }
-//   }
-//   return n === sum;
-// }
+function taskSix() {
+  const num1 = document.getElementById("areaNum1").value;
+  const num2 = document.getElementById("areaNum2").value;
+  if (!isNaN(num1) && !isNaN(num2)) {
+    document.getElementById("calcAreaResult").innerHTML = calcArea(num1, num2);
+  }
+}
+
+function isPerfect(n) {
+  let sum = 0;
+  for (let i = 0; i < n; i++) {
+    if (n % i === 0) {
+      sum += i;
+    }
+  }
+  return n === sum;
+}
 
 function taskSeven() {
-  // const min = prompt("Number 1");
-  // const max = prompt("Number 2");
-  // if (!isNaN(min) && !isNaN(max)) {
+  const num = +document.getElementById("perfectNum").value;
+  if (!isNaN(num)) {
+    const output = document.getElementById("isPerfectRes");
+    const res = isPerfect(num);
+    if (res === true) {
+      output.innerHTML = "Число досконале!";
+    } else {
+      output.innerHTML = "Число НЕ досконале";
+    }
+  }
 }
-// }
 
-// for (let i = 1; i < 3000; i++) {
-//   if (taskSix(i)) {
-//     console.log(i);
-//   }
-// }
+function range(start, end) {
+  for (let i = start; i < end; i++) {
+    if (isPerfect(i)) {
+      return i;
+    }
+  }
+}
 
-//В мне чомусь функція х досконалими числами не вийшла, що не так не знаю
+function taskEight() {
+  const min = document.getElementById("minRange").value;
+  const max = document.getElementById("maxRange").value;
+  if (!isNaN(min) && !isNaN(max)) {
+    let res = range(min, max);
+    document.getElementById("perfectNumList").innerHTML = console.log(res);
+  }
+}
+
+//В останній задачі повертається тільки останнє значення

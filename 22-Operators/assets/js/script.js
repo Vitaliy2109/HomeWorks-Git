@@ -14,7 +14,8 @@ function taskOne() {
 function taskTwo() {
   let a = "1";
   let b = 2;
-  alert(parseInt(a) + b);
+  let res = parseInt(a) + b;
+  alert(res);
 }
 
 // task --3
@@ -45,9 +46,8 @@ function taskFour() {
       let amount = sum / price;
       let change = sum - Math.floor(amount) * price;
       alert(
-        `За ${sum} грн при ціні ${price} за одну шоколадку, ви зможете купити ${Math.floor(
-          amount
-        )} шоколадок, та в вас залишиться ${change.toFixed(2)} грн`
+        `За ${sum} грн при ціні ${price} за одну шоколадку, ви зможете купити ${amount}
+         шоколадок, та в вас залишиться ${change.toFixed(2)} грн`
       );
     } else {
       alert("Вам потрібео ввести число!");
@@ -91,4 +91,3 @@ function taskSix() {
 
   alert(result);
 }
-

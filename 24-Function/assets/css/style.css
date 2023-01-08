@@ -36,3 +36,7 @@ ol {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+output {
+  font-size: 28px;
+}

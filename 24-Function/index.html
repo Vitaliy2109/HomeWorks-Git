@@ -13,90 +13,111 @@
   </head>
   <body>
     <main>
-      <div class="container xs mt-5 d-flex flex-column gap-5">
+      <div class="container xs mt-5 pb-5 d-flex flex-column gap-5">
         <div class="card" style="width: 80%">
           <div class="card-body">
-            <h5 class="card-title">Завдання 1</h5>
-            <p class="card-text">
-              Створи функцію, яка буде виводити кількість переданих їй
-              аргументів.
-            </p>
-            <a href="#" class="btn btn-primary" onclick="taskOne( )"
-              >Кнопочка</a
-            >
-          </div>
-        </div>
-        <div class="card" style="width: 80%">
-          <div class="card-body">
-            <h5 class="card-title">Завдання 2</h5>
+            <h5 class="card-title">Завдання 3</h5>
             <p class="card-text">
               Напиши функцію, яка приймає 2 числа і повертає : -1, якщо перше
               число менше, ніж друге; 1 - якщо перше число більше, ніж друге; 0
               - якщо числа рівні.
             </p>
-            <a href="#" class="btn btn-primary" onclick="taskTwo( )"
-              >Кнопочка</a
-            >
-          </div>
-        </div>
-        <div class="card" style="width: 80%">
-          <div class="card-body">
-            <h5 class="card-title">Завдання 3</h5>
-            <p class="card-text">
-              Напиши функцію, яка обчислює факторіал переданого їй числа.
-            </p>
-            <a href="#" class="btn btn-primary" onclick="taskThree( )"
-              >Кнопочка</a
-            >
+            <label for="compareNum1">Число 1</label>
+
+            <input type="number" id="compareNum1" />
+            <br />
+            <label for="compareNum2">Число 2</label>
+
+            <input type="number" id="compareNum2" />
+            <br />
+            <output id="comapeResult"></output>
+            <br />
+            <br />
+            <button href="#" class="btn btn-primary" onclick="taskThree()">
+              Кнопочка
+            </button>
           </div>
         </div>
         <div class="card" style="width: 80%">
           <div class="card-body">
             <h5 class="card-title">Завдання 4</h5>
-            <p class="card-text">
-              Напиши функцію, яка приймає три окремі цифри і перетворює їх в
-              одне число. Наприклад: цифри 1, 4, 9 перетворяться в число 149.
-            </p>
-            <a href="#" class="btn btn-primary" onclick="taskFour()"
-              >Кнопочка</a
-            >
+            <p>Напиши функцію, яка обчислює факторіал переданого їй числа.</p>
+            <input type="number" id="factorialInput" />
+
+            <button href="#" class="btn btn-primary" onclick="taskFour()">
+              Кнопочка
+            </button>
+            <output id="factorialResult"></output>
           </div>
         </div>
         <div class="card" style="width: 80%">
           <div class="card-body">
             <h5 class="card-title">Завдання 5</h5>
             <p class="card-text">
+              Напиши функцію, яка приймає три окремі цифри і перетворює їх в
+              одне число. Наприклад: цифри 1, 4, 9 перетворяться в число 149.
+            </p>
+            <input type="number" id="uniteNum1" />
+            <input type="number" id="uniteNum2" />
+            <input type="number" id="uniteNum3" />
+            <button class="btn btn-primary" onclick="taskFive()">
+              Кнопочка
+            </button>
+            <output id="uniteResult"></output>
+          </div>
+        </div>
+        <div class="card" style="width: 80%">
+          <div class="card-body">
+            <h5 class="card-title">Завдання 6</h5>
+            <p class="card-text">
               Напиши функцію, яка приймає довжину і ширину прямокутника і
               обчислює його площу. Якщо в функцію передали 1 параметр, то вона
               обчислює площу квадрата.
             </p>
-            <a href="#" class="btn btn-primary" onclick="taskFive()"
-              >Кнопочка</a
-            >
+            <label for="areaNum1">1</label>
+            <input type="number" id="areaNum1" />
+            <label for="areaNum2">2</label>
+            <input type="number" id="areaNum2" />
+            <button href="#" class="btn btn-primary" onclick="taskSix()">
+              Кнопочка
+            </button>
+            <output id="calcAreaResult"></output>
           </div>
         </div>
         <div class="card" style="width: 80%">
           <div class="card-body">
-            <h5 class="card-title">Завдання 6 ?</h5>
+            <h5 class="card-title">Завдання 7</h5>
             <p class="card-text">
               Напиши функцію, яка перевіряє, чи є передане їй число “досконалим
               числом”. Досконале число - це число, яке дорівнює сумі всіх своїх
               дільників.
             </p>
-            <a href="#" class="btn btn-primary" onclick="taskSix()">Кнопочка</a>
+            <input type="number" id="perfectNum" oninput="taskSeven()" />
+            <button href="#" class="btn btn-primary" onclick="taskSeven()">
+              Кнопочка
+            </button>
+            <output id="isPerfectRes"></output>
           </div>
         </div>
         <div class="card" style="width: 80%">
           <div class="card-body">
-            <h5 class="card-title">Завдання 7?</h5>
+            <h5 class="card-title">Завдання 8</h5>
             <p class="card-text">
-              Напиши функцію, яка перевіряє, чи є передане їй число “досконалим
-              числом”. Досконале число - це число, яке дорівнює сумі всіх своїх
-              дільників.
+              Напиши функцію, яка приймає мінімальне і максимальне значення для
+              діапазону, і виводить тільки ті числа з діапазону, які є
+              досконалими. Використовуй написану раніше функцію, щоб дізнатися,
+              чи є це число досконалим.
             </p>
-            <a href="#" class="btn btn-primary" onclick="taskSeven()"
-              >Кнопочка</a
-            >
+            <label for="minRange">MIN</label>
+            <input type="number" id="minRange" />
+            <br />
+            <label for="maxRange">MAX</label>
+            <input type="number" id="maxRange" />
+
+            <button href="#" class="btn btn-primary" onclick="taskEight()">
+              Кнопочка
+            </button>
+            <output id="perfectNumList"></output>
           </div>
         </div>
       </div>
