@@ -99,23 +99,25 @@ function taskSeven() {
 }
 
 function range(start, end) {
+  var res = "";
+
   for (var i = start; i < end; i++) {
     if (isPerfect(i)) {
-      return i;
+      res += i + " ";
     }
   }
-}
 
-range(1, 1000);
+  return res;
+}
 
 function taskEight() {
   var min = document.getElementById("minRange").value;
   var max = document.getElementById("maxRange").value;
 
-  if (!isNaN(min) && !isNaN(max)) {
+  if (!isNaN(min) && !isNaN(max) && max <= 11111) {
     var res = range(min, max);
     document.getElementById("perfectNumList").innerHTML = res;
   } else {
-    document.getElementById("perfectNumList").innerHTML = "Введіть число!";
+    document.getElementById("perfectNumList").innerHTML = "Введіть число до 11111";
   }
-} //В останній задачі повертається тільки останнє значення
+}
