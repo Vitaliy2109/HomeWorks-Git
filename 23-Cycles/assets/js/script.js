@@ -121,16 +121,18 @@ function taskSeven() {
   let sum = prompt("Введіть ваше число").trim();
   if (!isNaN(sum)) {
     let res;
-    Math.floor(sum) >= 200 && Math.floor(sum) <= 299
-      ? ((res = sum * 0.03),
-        alert(`Ваша знижка з ${sum} == ${res.toFixed(2)} грн`))
-      : Math.floor(sum) >= 300 && Math.floor(sum) <= 499
-      ? ((res = sum * 0.05),
-        alert(`Ваша знижка з ${sum} == ${res.toFixed(2)} грн`))
-      : Math.floor(sum) >= 500
-      ? ((res = sum * 0.07),
-        alert(`Ваша знижка з ${sum} == ${res.toFixed(2)} грн`))
-      : alert("Знижки не буде");
+    if (Math.floor(sum) >= 200 && Math.floor(sum) <= 299) {
+      (res = sum * 0.03),
+        alert(`Ваша знижка з ${sum} == ${res.toFixed(2)} грн`);
+    } else if (Math.floor(sum) >= 300 && Math.floor(sum) <= 499) {
+      (res = sum * 0.05),
+        alert(`Ваша знижка з ${sum} == ${res.toFixed(2)} грн`);
+    } else if (Math.floor(sum) >= 500) {
+      (res = sum * 0.07),
+        alert(`Ваша знижка з ${sum} == ${res.toFixed(2)} грн`);
+    } else {
+      alert("Знижки не буде");
+    }
   } else {
     alert("Вам потрібно ввести число!");
   }
@@ -140,7 +142,7 @@ function taskEight() {
   let plusses = 0;
   let minuses = 0;
   let zero = 0;
-  for (let i = 1; i <= 10; i++) {
+  for (let i = 1; i <= 2; i++) {
     let number = parseInt(prompt("Введіть число"));
     if (!isNaN(number)) {
       if (number < 0) {
@@ -155,6 +157,7 @@ function taskEight() {
       alert("Вам потрібно ввести число!");
     }
   }
+
   alert(
     `Ви ввели ${plusses} додатніх чисел, ${minuses} від'ємних чисел, і ${zero} нулів`
   );

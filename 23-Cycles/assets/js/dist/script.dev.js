@@ -143,7 +143,16 @@ function taskSeven() {
 
   if (!isNaN(sum)) {
     var res;
-    Math.floor(sum) >= 200 && Math.floor(sum) <= 299 ? (res = sum * 0.03, alert("\u0412\u0430\u0448\u0430 \u0437\u043D\u0438\u0436\u043A\u0430 \u0437 ".concat(sum, " == ").concat(res.toFixed(2), " \u0433\u0440\u043D"))) : Math.floor(sum) >= 300 && Math.floor(sum) <= 499 ? (res = sum * 0.05, alert("\u0412\u0430\u0448\u0430 \u0437\u043D\u0438\u0436\u043A\u0430 \u0437 ".concat(sum, " == ").concat(res.toFixed(2), " \u0433\u0440\u043D"))) : Math.floor(sum) >= 500 ? (res = sum * 0.07, alert("\u0412\u0430\u0448\u0430 \u0437\u043D\u0438\u0436\u043A\u0430 \u0437 ".concat(sum, " == ").concat(res.toFixed(2), " \u0433\u0440\u043D"))) : alert("Знижки не буде");
+
+    if (Math.floor(sum) >= 200 && Math.floor(sum) <= 299) {
+      res = sum * 0.03, alert("\u0412\u0430\u0448\u0430 \u0437\u043D\u0438\u0436\u043A\u0430 \u0437 ".concat(sum, " == ").concat(res.toFixed(2), " \u0433\u0440\u043D"));
+    } else if (Math.floor(sum) >= 300 && Math.floor(sum) <= 499) {
+      res = sum * 0.05, alert("\u0412\u0430\u0448\u0430 \u0437\u043D\u0438\u0436\u043A\u0430 \u0437 ".concat(sum, " == ").concat(res.toFixed(2), " \u0433\u0440\u043D"));
+    } else if (Math.floor(sum) >= 500) {
+      res = sum * 0.07, alert("\u0412\u0430\u0448\u0430 \u0437\u043D\u0438\u0436\u043A\u0430 \u0437 ".concat(sum, " == ").concat(res.toFixed(2), " \u0433\u0440\u043D"));
+    } else {
+      alert("Знижки не буде");
+    }
   } else {
     alert("Вам потрібно ввести число!");
   }
@@ -154,7 +163,7 @@ function taskEight() {
   var minuses = 0;
   var zero = 0;
 
-  for (var i = 1; i <= 10; i++) {
+  for (var i = 1; i <= 2; i++) {
     var number = parseInt(prompt("Введіть число"));
 
     if (!isNaN(number)) {
